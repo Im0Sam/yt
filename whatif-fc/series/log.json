@@ -7,12 +7,36 @@
       "premise": "A 41-year-old keeper who won't retire, and his son Teo, who keeps goal for the other side.",
       "status": "active",
       "outline": [
-        {"ep": "ep001", "slug": "ep001-el-viejo", "beat": "The final: broken hand, penalty save, scores from his own box past his own son."},
-        {"ep": "ep002", "slug": "ep002-teos-side", "beat": "Same night from Teo's POV: why he went up for the corner, the sprint back, the moment he saw who kicked it. Twist: he let himself be beaten? (leave ambiguous)."},
-        {"ep": "ep003", "slug": "ep003-the-tape", "beat": "Flashback: why 'TEO' is written on the tape. Years earlier, El Viejo missed his son's first match for a game of his own and has written the name on his tape every match since."},
-        {"ep": "ep004", "slug": "ep004-the-offer", "beat": "Next season: Teo's club offers El Viejo a goalkeeper-coach job. To take it he must retire. Twist: he says no, then turns up at training anyway."},
-        {"ep": "ep005", "slug": "ep005-the-shootout", "beat": "Father vs son again, in a penalty shootout. El Viejo has to take the final kick against Teo."},
-        {"ep": "ep006", "slug": "ep006-the-gloves", "beat": "Arc finale: El Viejo retires on the pitch and hands Teo his taped gloves. Loop back to the net-ripple image."}
+        {
+          "ep": "ep001",
+          "slug": "ep001-el-viejo",
+          "beat": "The final: broken hand, penalty save, scores from his own box past his own son."
+        },
+        {
+          "ep": "ep002",
+          "slug": "ep002-teos-side",
+          "beat": "Same night from Teo's POV: why he went up for the corner, the sprint back, the moment he saw who kicked it. Twist: he let himself be beaten? (leave ambiguous)."
+        },
+        {
+          "ep": "ep003",
+          "slug": "ep003-the-tape",
+          "beat": "Flashback: why 'TEO' is written on the tape. Years earlier, El Viejo missed his son's first match for a game of his own and has written the name on his tape every match since."
+        },
+        {
+          "ep": "ep004",
+          "slug": "ep004-the-offer",
+          "beat": "Next season: Teo's club offers El Viejo a goalkeeper-coach job. To take it he must retire. Twist: he says no, then turns up at training anyway."
+        },
+        {
+          "ep": "ep005",
+          "slug": "ep005-the-shootout",
+          "beat": "Father vs son again, in a penalty shootout. El Viejo has to take the final kick against Teo."
+        },
+        {
+          "ep": "ep006",
+          "slug": "ep006-the-gloves",
+          "beat": "Arc finale: El Viejo retires on the pitch and hands Teo his taped gloves. Loop back to the net-ripple image."
+        }
       ]
     }
   ],
@@ -21,10 +45,36 @@
       "ep": "ep001",
       "slug": "ep001-el-viejo",
       "arc": "arc01-el-viejo",
-      "status": "ready",
+      "status": "partial",
       "built": "2026-11-25",
       "video": "whatif-fc/videos/ep001-el-viejo.mp4",
-      "posts": {}
+      "posts": {
+        "instagram": {
+          "media_id": "18105405350056380",
+          "posted": "2026-11-25",
+          "pinned_comment_id": "18196550080404687"
+        },
+        "youtube": "PENDING: upload rate-limited twice on 2026-11-25, retry next run",
+        "tiktok": "MANUAL: Windsor has no TikTok upload action; sent to Samir to post"
+      }
     }
-  ]
+  ],
+  "accounts": {
+    "youtube": {
+      "connector": "youtube",
+      "account": "123277",
+      "name": "mindshift049@gmail.com"
+    },
+    "instagram": {
+      "connector": "instagram",
+      "account": "17841412980483195",
+      "name": "3_am._3sa"
+    },
+    "tiktok": {
+      "connector": "tiktok_organic",
+      "account": "_0007XvPtDyTzVplU5LwZAxr8xB8teYDNI3J",
+      "name": "Cortex",
+      "note": "comments only, no upload via Windsor"
+    }
+  }
 }

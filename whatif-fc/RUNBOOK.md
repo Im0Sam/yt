@@ -1,7 +1,7 @@
 # What If FC: daily run
 
-Each scheduled run **posts the oldest `ready` episode** to YouTube Shorts, TikTok and Instagram (one
-video per platform), then **builds the next episode** so it is `ready` for tomorrow. This one-day buffer means a failed
+Each scheduled run **posts the oldest `ready` episode** to YouTube Shorts and Instagram through Windsor.ai, and sends
+the video to Samir to post on TikTok himself (one video per platform), then **builds the next episode** so it is `ready` for tomorrow. This one-day buffer means a failed
 render never causes a missed post.
 
 Read `series/BIBLE.md` and `series/log.json` first. Work from the repo root (`whatif-fc/`).
@@ -13,23 +13,29 @@ which ffmpeg
 ```
 The voice model and font are in the repo (`models/`, `engine/fonts/`). Nothing else needs downloading.
 
-## 1. Post the oldest ready episode
-1. In `series/log.json`, find the oldest episode with `status: "ready"`. Its file is `videos/<slug>.mp4`, and the
-   public URL is `https://raw.githubusercontent.com/Im0Sam/yt/main/whatif-fc/videos/<slug>.mp4`.
-   Check it with `curl -sI <url>`. It must return 200.
-2. Load the **Windsor.ai for Social Media** connector tools (ToolSearch `+windsor`). Post the video with
-   `episodes/<slug>/script.json` → `publish`:
-   - **YouTube**: as a Short. Title = `publish.title` (60 characters or fewer). Description = `publish.description`. Tags = `publish.tags`.
-     Visibility public. Category Film & Animation. Not made for kids.
-   - **TikTok**: caption = `publish.title` + newline + the debate question + hashtags.
-   - **Instagram**: a Reel, also shared to the feed. Caption = description + hashtags.
-   - After it goes live, post `publish.pinned_comment` as a comment where the connector supports comments, and pin it on YouTube if possible.
-3. Record each platform's post id or URL in `log.json` → `posts`, set `status: "posted"` and `posted: <date>`.
-   If a platform fails, retry once. If it still fails, record `"<platform>": "FAILED: <reason>"` and leave the
-   episode `ready` only if **all** platforms failed. Otherwise mark it posted and note the failure.
-4. **If the Windsor connector is missing or not authorised:** don't post anything. Send Samir a push notification saying
-   the Windsor.ai connection needs reconnecting, then continue to step 2 only if fewer than 2 episodes are `ready`.
-5. Never post anything except the episode videos. Never delete or edit existing posts. Don't reply to comments.
+## 1. Post
+Account ids are in `series/log.json` → `accounts`. All posting goes through the **Windsor.ai for Social Media**
+connector (ToolSearch `windsor`). Call `execute_action` with the connector, action and account given below.
+
+1. **Finish partial episodes first.** For any episode with `status: "partial"`, retry only the platforms marked
+   `PENDING` or `FAILED`, and never re-post a platform that already has an id.
+2. Then post the oldest `status: "ready"` episode. Its video URL is
+   `https://raw.githubusercontent.com/Im0Sam/yt/main/whatif-fc/videos/<slug>.mp4`, and `curl -sI` must return 200.
+   Metadata comes from `episodes/<slug>/script.json` → `publish`.
+   - **YouTube**: `connector "youtube"`, `action "upload_video"`, with params `video_url`, `title` (publish.title + " #Shorts", 100 characters or fewer),
+     `description` (publish.description), `tags`, `category_id "1"`, `made_for_kids false`, `privacy_status "public"`.
+     If you get "rate-limited", wait 75 s with Bash `sleep 75` and retry once. If it still fails, mark it `PENDING` and the next run retries.
+     Before any retry, check the channel's video list with `get_data` (fields video, video_title, published_at), so you never upload twice.
+   - **Instagram**: `connector "instagram"`, `action "create_video_post"`, with params `video_url`, `caption` (description +
+     hashtags, 2200 characters or fewer) and `share_to_feed true`. Then `create_comment` with `media_id` and `message` = publish.pinned_comment.
+   - **TikTok**: Windsor can't upload to TikTok. Don't try another route. Send Samir the video with SendUserFile
+     (`videos/<slug>.mp4`) plus a ready-to-paste TikTok caption, so he can post it from his phone. Record `tiktok: "MANUAL"`.
+3. Record the ids or URLs in `log.json` → `posts` with the date. Set `status` to `"posted"` once YouTube and Instagram both
+   succeeded, otherwise `"partial"`.
+4. **If Windsor is missing, unauthorised or out of trial/plan:** post nothing and tell Samir exactly what to reconnect or
+   renew. Then continue to step 2 only if fewer than 2 episodes are `ready`.
+5. Only post episode videos. Never delete or edit existing posts and never reply to comments, except the one pinned-comment
+   post per episode described above.
 
 ## 2. Build the next episode
 1. Pick the next unbuilt episode from the active arc's `outline`. If the arc is complete, mark it `"status": "done"`,

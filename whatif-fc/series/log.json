@@ -54,12 +54,21 @@
           "posted": "2026-11-25",
           "pinned_comment_id": "18196550080404687"
         },
-        "youtube": "PENDING: Windsor upload_video returned \"rate-limited\" 3 times on 2026-11-25 (13:3x-13:5x UTC); next run checks the channel then retries once",
+        "youtube": "PENDING: Windsor upload_video returned \"rate-limited\" again on 2026-11-25 17:35 and 17:37 UTC (5 failures total since 13:3x UTC). Channel list checked before each retry: not uploaded. Next run checks the channel then retries.",
         "tiktok": {
           "posted": "2026-11-25",
           "by": "Samir (manual)"
         }
       }
+    },
+    {
+      "ep": "ep002",
+      "slug": "ep002-teos-side",
+      "arc": "arc01-el-viejo",
+      "status": "ready",
+      "built": "2026-11-25",
+      "video": "whatif-fc/videos/ep002-teos-side.mp4",
+      "posts": {}
     }
   ],
   "accounts": {

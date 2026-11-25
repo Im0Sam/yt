@@ -1,0 +1,596 @@
+{
+ "id": "ep002",
+ "slug": "ep002-teos-side",
+ "arc": "arc01-el-viejo",
+ "title_internal": "El Viejo 2: Teo's side",
+ "duration": 31.5,
+ "voice": "am_michael",
+ "seed": 6,
+ "hook": {
+  "line1": "DID HE LET",
+  "line2": "HIS DAD SCORE?",
+  "until": 3.0,
+  "pulse_at": 0.5
+ },
+ "lines": [
+  {
+   "text": "He had one job.",
+   "caption": "HE HAD ONE JOB.",
+   "hl": [
+    "JOB"
+   ],
+   "anchor": 0.05,
+   "speed": 1.1
+  },
+  {
+   "text": "Stop his own father.",
+   "caption": "STOP HIS OWN FATHER.",
+   "hl": [
+    "FATHER"
+   ],
+   "anchor": 1.3,
+   "speed": 1.1
+  },
+  {
+   "text": "Same final. The other end of the pitch.",
+   "caption": "SAME FINAL. THE OTHER END OF THE PITCH.",
+   "hl": [
+    "OTHER"
+   ],
+   "anchor": 3.1,
+   "speed": 1.1
+  },
+  {
+   "text": "Ninety-ninth minute. One all.",
+   "caption": "99TH MINUTE. 1–1.",
+   "hl": [
+    "99TH"
+   ],
+   "anchor": 5.9,
+   "speed": 1.2
+  },
+  {
+   "text": "His coach screamed one word.",
+   "caption": "HIS COACH SCREAMED ONE WORD.",
+   "hl": [
+    "SCREAMED"
+   ],
+   "anchor": 7.55,
+   "speed": 1.2
+  },
+  {
+   "text": "Up.",
+   "caption": "UP.",
+   "hl": [
+    "UP"
+   ],
+   "anchor": 9.0,
+   "speed": 0.95
+  },
+  {
+   "text": "First time he'd ever left his goal.",
+   "caption": "FIRST TIME HE'D EVER LEFT HIS GOAL.",
+   "hl": [
+    "LEFT"
+   ],
+   "anchor": 9.8,
+   "speed": 1.1
+  },
+  {
+   "text": "And the corner dropped... into his dad's gloves.",
+   "caption": "THE CORNER DROPPED INTO HIS DAD'S GLOVES.",
+   "hl": [
+    "DAD'S"
+   ],
+   "anchor": 12.1,
+   "speed": 1.1
+  },
+  {
+   "text": "Then he heard the kick.",
+   "caption": "THEN HE HEARD THE KICK.",
+   "hl": [
+    "KICK"
+   ],
+   "anchor": 14.75,
+   "speed": 1.1
+  },
+  {
+   "text": "Eighty metres. Empty goal.",
+   "caption": "80 METRES. EMPTY GOAL.",
+   "hl": [
+    "EMPTY"
+   ],
+   "anchor": 16.5,
+   "speed": 1.05
+  },
+  {
+   "text": "He was the fastest player on the pitch.",
+   "caption": "HE WAS THE FASTEST PLAYER ON THE PITCH.",
+   "hl": [
+    "FASTEST"
+   ],
+   "anchor": 18.4,
+   "speed": 1.1
+  },
+  {
+   "text": "Three steps from the ball...",
+   "caption": "THREE STEPS FROM THE BALL…",
+   "hl": [
+    "THREE"
+   ],
+   "anchor": 20.8,
+   "speed": 1.05
+  },
+  {
+   "text": "he slowed down.",
+   "caption": "HE SLOWED DOWN.",
+   "hl": [
+    "SLOWED"
+   ],
+   "anchor": 22.7,
+   "speed": 0.95
+  },
+  {
+   "text": "Rain? Tired legs?",
+   "caption": "RAIN? TIRED LEGS?",
+   "hl": [
+    "RAIN?",
+    "LEGS?"
+   ],
+   "anchor": 24.3,
+   "speed": 1.05
+  },
+  {
+   "text": "Or a son who wanted his dad to win?",
+   "caption": "OR A SON WHO WANTED HIS DAD TO WIN?",
+   "hl": [
+    "WIN"
+   ],
+   "anchor": 26.0,
+   "speed": 1.05
+  },
+  {
+   "text": "Ask him, and he'll only say...",
+   "caption": "ASK HIM, AND HE'LL ONLY SAY…",
+   "hl": [
+    "SAY"
+   ],
+   "anchor": 28.9,
+   "speed": 1.0
+  }
+ ],
+ "sound": {
+  "rain": 1.0,
+  "crowd": [
+   [
+    0,
+    0.04
+   ],
+   [
+    3.0,
+    0.06
+   ],
+   [
+    3.1,
+    0.2
+   ],
+   [
+    5.8,
+    0.2
+   ],
+   [
+    7.5,
+    0.25
+   ],
+   [
+    9.7,
+    0.3
+   ],
+   [
+    12.0,
+    0.3
+   ],
+   [
+    13.3,
+    0.5
+   ],
+   [
+    14.6,
+    0.35
+   ],
+   [
+    14.9,
+    0.55
+   ],
+   [
+    16.4,
+    0.3
+   ],
+   [
+    20.6,
+    0.12
+   ],
+   [
+    24.2,
+    0.06
+   ],
+   [
+    26.0,
+    0.08
+   ],
+   [
+    27.2,
+    0.1
+   ],
+   [
+    27.35,
+    0.7
+   ],
+   [
+    28.6,
+    0.35
+   ],
+   [
+    31.5,
+    0.12
+   ]
+  ],
+  "drone": [
+   [
+    0,
+    0.08
+   ],
+   [
+    3.0,
+    0.05
+   ],
+   [
+    5.8,
+    0.1
+   ],
+   [
+    9.7,
+    0.12
+   ],
+   [
+    14.6,
+    0.14
+   ],
+   [
+    16.4,
+    0.2
+   ],
+   [
+    20.6,
+    0.26
+   ],
+   [
+    24.2,
+    0.3
+   ],
+   [
+    26.0,
+    0.2
+   ],
+   [
+    27.2,
+    0.32
+   ],
+   [
+    28.6,
+    0.2
+   ],
+   [
+    31.5,
+    0.08
+   ]
+  ],
+  "drone_hz": [
+   [
+    0,
+    55
+   ],
+   [
+    9.7,
+    55
+   ],
+   [
+    16.4,
+    58.3
+   ],
+   [
+    20.6,
+    61.7
+   ],
+   [
+    26.0,
+    65.4
+   ],
+   [
+    28.6,
+    55
+   ],
+   [
+    31.5,
+    55
+   ]
+  ],
+  "events": [
+   {
+    "type": "thump",
+    "t": 0.0,
+    "gain": 0.5,
+    "dur": 0.4,
+    "f": 60
+   },
+   {
+    "type": "whoosh",
+    "t": 2.85,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 400,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 3.0,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 90
+   },
+   {
+    "type": "whoosh",
+    "t": 5.65,
+    "gain": 0.3,
+    "dur": 0.35,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "whistle",
+    "t": 5.85,
+    "gain": 0.6,
+    "dur": 0.4,
+    "pan": 0.3
+   },
+   {
+    "type": "thump",
+    "t": 7.5,
+    "gain": 0.7,
+    "dur": 0.3,
+    "f": 120
+   },
+   {
+    "type": "whoosh",
+    "t": 7.55,
+    "gain": 0.45,
+    "dur": 0.6,
+    "lo": 300,
+    "hi": 2500
+   },
+   {
+    "type": "thump",
+    "t": 8.7,
+    "gain": 0.55,
+    "dur": 0.25,
+    "f": 150,
+    "pan": 0.2
+   },
+   {
+    "type": "whoosh",
+    "t": 8.72,
+    "gain": 0.35,
+    "dur": 0.3,
+    "lo": 800,
+    "hi": 4000
+   },
+   {
+    "type": "hit",
+    "t": 9.0,
+    "gain": 0.6,
+    "dur": 1.0,
+    "f": 60,
+    "click": 0.5
+   },
+   {
+    "type": "whoosh",
+    "t": 9.7,
+    "gain": 0.4,
+    "dur": 0.9,
+    "lo": 200,
+    "hi": 1500,
+    "pan": -0.3
+   },
+   {
+    "type": "footsteps",
+    "t": 9.75,
+    "n": 16,
+    "step": 0.14,
+    "gain": 0.45
+   },
+   {
+    "type": "whoosh",
+    "t": 12.0,
+    "gain": 0.35,
+    "dur": 1.2,
+    "lo": 2500,
+    "hi": 400,
+    "pan": 0.5
+   },
+   {
+    "type": "thump",
+    "t": 13.3,
+    "gain": 0.85,
+    "dur": 0.35,
+    "f": 110
+   },
+   {
+    "type": "hit",
+    "t": 13.3,
+    "gain": 0.6,
+    "dur": 1.3,
+    "f": 52,
+    "click": 0.6
+   },
+   {
+    "type": "thump",
+    "t": 14.6,
+    "gain": 0.5,
+    "dur": 0.3,
+    "f": 90
+   },
+   {
+    "type": "thump",
+    "t": 14.8,
+    "gain": 0.95,
+    "dur": 0.3,
+    "f": 130
+   },
+   {
+    "type": "whoosh",
+    "t": 14.82,
+    "gain": 0.7,
+    "dur": 1.3,
+    "lo": 250,
+    "hi": 3500
+   },
+   {
+    "type": "whoosh",
+    "t": 16.35,
+    "gain": 0.3,
+    "dur": 0.5,
+    "lo": 300,
+    "hi": 1500
+   },
+   {
+    "type": "footsteps",
+    "t": 16.45,
+    "n": 29,
+    "step": 0.14,
+    "gain": 0.5
+   },
+   {
+    "type": "heartbeat",
+    "t": 20.6,
+    "until": 24.1,
+    "period": 0.55,
+    "gain": 0.55
+   },
+   {
+    "type": "footsteps",
+    "t": 20.65,
+    "n": 14,
+    "step": 0.15,
+    "gain": 0.55
+   },
+   {
+    "type": "footsteps",
+    "t": 22.8,
+    "n": 5,
+    "step": 0.32,
+    "gain": 0.4
+   },
+   {
+    "type": "whoosh",
+    "t": 24.15,
+    "gain": 0.25,
+    "dur": 0.6,
+    "lo": 3000,
+    "hi": 300
+   },
+   {
+    "type": "whoosh",
+    "t": 26.0,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 400,
+    "hi": 2500,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 26.4,
+    "gain": 0.35,
+    "dur": 0.2,
+    "f": 180
+   },
+   {
+    "type": "thump",
+    "t": 26.8,
+    "gain": 0.3,
+    "dur": 0.2,
+    "f": 180
+   },
+   {
+    "type": "thump",
+    "t": 27.2,
+    "gain": 0.85,
+    "dur": 0.4,
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 27.2,
+    "gain": 1.0,
+    "dur": 2.2,
+    "f": 44,
+    "click": 0.8
+   },
+   {
+    "type": "splash",
+    "t": 27.2,
+    "gain": 0.7
+   },
+   {
+    "type": "whoosh",
+    "t": 28.55,
+    "gain": 0.25,
+    "dur": 0.6,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 29.3,
+    "gain": 0.45,
+    "dur": 0.35,
+    "f": 70
+   },
+   {
+    "type": "splash",
+    "t": 29.3,
+    "gain": 0.35
+   },
+   {
+    "type": "whoosh",
+    "t": 30.7,
+    "gain": 0.3,
+    "dur": 0.8,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   }
+  ]
+ },
+ "publish": {
+  "title": "What If the Keeper Let His Dad Score?",
+  "description": "Same final. Other end of the pitch. Teo was the fastest player out there... so why did he slow down three steps from the ball?\nWhat If FC, Part 2 of El Viejo.\nFictional story. Animated, original characters.\n\nDid he let his dad win? 👇\n\n#football #whatiffc #shorts",
+  "hashtags": [
+   "#football",
+   "#goalkeeper",
+   "#WhatIfFC"
+  ],
+  "tags": [
+   "what if football",
+   "goalkeeper",
+   "football animation",
+   "football short film",
+   "football father son",
+   "what if fc",
+   "el viejo part 2"
+  ],
+  "pinned_comment": "Pause at 0:09 and read Teo's wrist tape 👀 Did he slow down on purpose?"
+ }
+}

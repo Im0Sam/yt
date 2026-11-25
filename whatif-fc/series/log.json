@@ -54,8 +54,11 @@
           "posted": "2026-11-25",
           "pinned_comment_id": "18196550080404687"
         },
-        "youtube": "PENDING: upload rate-limited twice on 2026-11-25, retry next run",
-        "tiktok": "MANUAL: Windsor has no TikTok upload action; sent to Samir to post"
+        "youtube": "PENDING: Windsor upload_video returned \"rate-limited\" 3 times on 2026-11-25 (13:3x-13:5x UTC); next run checks the channel then retries once",
+        "tiktok": {
+          "posted": "2026-11-25",
+          "by": "Samir (manual)"
+        }
       }
     }
   ],

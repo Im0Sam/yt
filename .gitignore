@@ -1,0 +1,3 @@
+whatif-fc/episodes/*/build/
+__pycache__/
+*.pyc

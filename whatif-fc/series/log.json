@@ -1,0 +1,30 @@
+{
+  "post_time_note": "Daily scheduled task. Each run posts the oldest 'ready' episode, then builds the next one as 'ready'.",
+  "arcs": [
+    {
+      "id": "arc01-el-viejo",
+      "title": "El Viejo",
+      "premise": "A 41-year-old keeper who won't retire, and his son Teo, who keeps goal for the other side.",
+      "status": "active",
+      "outline": [
+        {"ep": "ep001", "slug": "ep001-el-viejo", "beat": "The final: broken hand, penalty save, scores from his own box past his own son."},
+        {"ep": "ep002", "slug": "ep002-teos-side", "beat": "Same night from Teo's POV: why he went up for the corner, the sprint back, the moment he saw who kicked it. Twist: he let himself be beaten? (leave ambiguous)."},
+        {"ep": "ep003", "slug": "ep003-the-tape", "beat": "Flashback: why 'TEO' is written on the tape. Years earlier, El Viejo missed his son's first match for a game of his own and has written the name on his tape every match since."},
+        {"ep": "ep004", "slug": "ep004-the-offer", "beat": "Next season: Teo's club offers El Viejo a goalkeeper-coach job. To take it he must retire. Twist: he says no, then turns up at training anyway."},
+        {"ep": "ep005", "slug": "ep005-the-shootout", "beat": "Father vs son again, in a penalty shootout. El Viejo has to take the final kick against Teo."},
+        {"ep": "ep006", "slug": "ep006-the-gloves", "beat": "Arc finale: El Viejo retires on the pitch and hands Teo his taped gloves. Loop back to the net-ripple image."}
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "ep": "ep001",
+      "slug": "ep001-el-viejo",
+      "arc": "arc01-el-viejo",
+      "status": "ready",
+      "built": "2026-11-25",
+      "video": "whatif-fc/videos/ep001-el-viejo.mp4",
+      "posts": {}
+    }
+  ]
+}

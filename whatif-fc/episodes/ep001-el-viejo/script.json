@@ -1,0 +1,580 @@
+{
+ "id": "ep001",
+ "slug": "ep001-el-viejo",
+ "arc": "arc01-el-viejo",
+ "title_internal": "El Viejo: the final",
+ "duration": 31.0,
+ "voice": "am_michael",
+ "seed": 5,
+ "hook": {
+  "line1": "HE SCORED",
+  "line2": "FROM HIS OWN BOX",
+  "until": 3.0,
+  "pulse_at": 0.62
+ },
+ "lines": [
+  {
+   "text": "Forty-one years old.",
+   "caption": "FORTY-ONE YEARS OLD.",
+   "hl": [
+    "FORTY-ONE"
+   ],
+   "anchor": 0.05,
+   "speed": 1.2
+  },
+  {
+   "text": "Broken hand.",
+   "caption": "BROKEN HAND.",
+   "hl": [
+    "BROKEN"
+   ],
+   "anchor": 1.05,
+   "speed": 1.2
+  },
+  {
+   "text": "And he just won the final.",
+   "caption": "AND HE JUST WON THE FINAL.",
+   "hl": [
+    "FINAL"
+   ],
+   "anchor": 1.8,
+   "speed": 1.2
+  },
+  {
+   "text": "Ten minutes earlier...",
+   "caption": "TEN MINUTES EARLIER…",
+   "hl": [],
+   "anchor": 3.05,
+   "speed": 1.05
+  },
+  {
+   "text": "his own coach tried to take him off.",
+   "caption": "HIS OWN COACH TRIED TO TAKE HIM OFF.",
+   "hl": [
+    "OFF"
+   ],
+   "anchor": 4.3,
+   "speed": 1.05
+  },
+  {
+   "text": "He refused.",
+   "caption": "HE REFUSED.",
+   "hl": [
+    "REFUSED"
+   ],
+   "anchor": 6.5,
+   "speed": 1.05
+  },
+  {
+   "text": "No keepers left on the bench.",
+   "caption": "NO KEEPERS LEFT ON THE BENCH.",
+   "hl": [
+    "NO"
+   ],
+   "anchor": 7.6,
+   "speed": 1.05
+  },
+  {
+   "text": "And someone at the other end was watching.",
+   "caption": "SOMEONE AT THE OTHER END WAS WATCHING.",
+   "hl": [
+    "WATCHING"
+   ],
+   "anchor": 9.6,
+   "speed": 1.05
+  },
+  {
+   "text": "Penalty. Ninety-fourth minute.",
+   "caption": "PENALTY. 94TH MINUTE.",
+   "hl": [
+    "PENALTY"
+   ],
+   "anchor": 12.05,
+   "speed": 1.05
+  },
+  {
+   "text": "He saves it...",
+   "caption": "HE SAVES IT…",
+   "hl": [
+    "SAVES"
+   ],
+   "anchor": 14.2,
+   "speed": 1.05
+  },
+  {
+   "text": "with the one hand that still works.",
+   "caption": "WITH THE ONE HAND THAT STILL WORKS.",
+   "hl": [
+    "ONE",
+    "HAND"
+   ],
+   "anchor": 15.4,
+   "speed": 1.05
+  },
+  {
+   "text": "Ninety-ninth minute. Last corner.",
+   "caption": "99TH MINUTE. LAST CORNER.",
+   "hl": [
+    "99TH"
+   ],
+   "anchor": 17.6,
+   "speed": 1.05
+  },
+  {
+   "text": "Their keeper's up for the corner.",
+   "caption": "THEIR KEEPER'S UP FOR THE CORNER.",
+   "hl": [
+    "KEEPER'S"
+   ],
+   "anchor": 20.4,
+   "speed": 1.05
+  },
+  {
+   "text": "Their goal? Empty.",
+   "caption": "THEIR GOAL? EMPTY.",
+   "hl": [
+    "EMPTY"
+   ],
+   "anchor": 21.9,
+   "speed": 1.05
+  },
+  {
+   "text": "From his own box...",
+   "caption": "FROM HIS OWN BOX…",
+   "hl": [
+    "OWN",
+    "BOX"
+   ],
+   "anchor": 23.35,
+   "speed": 1.05
+  },
+  {
+   "text": "The keeper chasing it?",
+   "caption": "THE KEEPER CHASING IT?",
+   "hl": [
+    "CHASING"
+   ],
+   "anchor": 25.0,
+   "speed": 1.05
+  },
+  {
+   "text": "His son.",
+   "caption": "HIS SON.",
+   "hl": [
+    "SON"
+   ],
+   "anchor": 26.8,
+   "speed": 0.9
+  },
+  {
+   "text": "And when it finally came down...",
+   "caption": "AND WHEN IT FINALLY CAME DOWN…",
+   "hl": [
+    "DOWN"
+   ],
+   "anchor": 28.5,
+   "speed": 1.05
+  }
+ ],
+ "sound": {
+  "rain": 1.0,
+  "crowd": [
+   [
+    0,
+    0.05
+   ],
+   [
+    0.62,
+    0.02
+   ],
+   [
+    1.0,
+    0.02
+   ],
+   [
+    1.3,
+    0.55
+   ],
+   [
+    2.6,
+    0.45
+   ],
+   [
+    3.0,
+    0.12
+   ],
+   [
+    11.6,
+    0.12
+   ],
+   [
+    13.2,
+    0.18
+   ],
+   [
+    14.8,
+    0.05
+   ],
+   [
+    14.95,
+    0.6
+   ],
+   [
+    16.5,
+    0.35
+   ],
+   [
+    17.4,
+    0.12
+   ],
+   [
+    19.7,
+    0.22
+   ],
+   [
+    19.9,
+    0.4
+   ],
+   [
+    20.6,
+    0.15
+   ],
+   [
+    23.2,
+    0.1
+   ],
+   [
+    23.8,
+    0.25
+   ],
+   [
+    26.6,
+    0.18
+   ],
+   [
+    28.2,
+    0.05
+   ],
+   [
+    31,
+    0.04
+   ]
+  ],
+  "drone": [
+   [
+    0,
+    0
+   ],
+   [
+    3.0,
+    0
+   ],
+   [
+    3.6,
+    0.1
+   ],
+   [
+    11.6,
+    0.14
+   ],
+   [
+    14.85,
+    0.2
+   ],
+   [
+    15.2,
+    0.08
+   ],
+   [
+    17.4,
+    0.12
+   ],
+   [
+    23.2,
+    0.18
+   ],
+   [
+    26.6,
+    0.24
+   ],
+   [
+    26.75,
+    0.32
+   ],
+   [
+    28.1,
+    0.3
+   ],
+   [
+    28.25,
+    0.06
+   ],
+   [
+    31,
+    0
+   ]
+  ],
+  "drone_hz": [
+   [
+    0,
+    55
+   ],
+   [
+    5.8,
+    55
+   ],
+   [
+    23.2,
+    62
+   ],
+   [
+    28.2,
+    73.4
+   ],
+   [
+    31,
+    73.4
+   ]
+  ],
+  "events": [
+   {
+    "type": "whoosh",
+    "t": 0.02,
+    "gain": 0.5,
+    "dur": 0.6,
+    "lo": 400,
+    "hi": 2600
+   },
+   {
+    "type": "thump",
+    "t": 0.62,
+    "gain": 0.9,
+    "dur": 0.5,
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 0.62,
+    "gain": 0.8,
+    "dur": 1.8,
+    "f": 50,
+    "click": 0.6
+   },
+   {
+    "type": "hit",
+    "t": 3.0,
+    "gain": 0.45,
+    "dur": 1.4,
+    "f": 55,
+    "click": 0.4
+   },
+   {
+    "type": "hit",
+    "t": 5.8,
+    "gain": 0.45,
+    "dur": 1.4,
+    "f": 55,
+    "click": 0.4
+   },
+   {
+    "type": "hit",
+    "t": 6.85,
+    "gain": 0.5,
+    "dur": 1.4,
+    "f": 55,
+    "click": 0.4
+   },
+   {
+    "type": "hit",
+    "t": 11.6,
+    "gain": 0.45,
+    "dur": 1.4,
+    "f": 55,
+    "click": 0.4
+   },
+   {
+    "type": "hit",
+    "t": 17.4,
+    "gain": 0.45,
+    "dur": 1.4,
+    "f": 55,
+    "click": 0.4
+   },
+   {
+    "type": "hit",
+    "t": 23.2,
+    "gain": 0.4,
+    "dur": 1.4,
+    "f": 55,
+    "click": 0.4
+   },
+   {
+    "type": "whoosh",
+    "t": 6.6,
+    "gain": 0.45,
+    "dur": 0.35,
+    "lo": 600,
+    "hi": 4000,
+    "pan": -0.3
+   },
+   {
+    "type": "whoosh",
+    "t": 9.5,
+    "gain": 0.25,
+    "dur": 0.5,
+    "lo": 200,
+    "hi": 1200
+   },
+   {
+    "type": "whistle",
+    "t": 11.85,
+    "gain": 1.0,
+    "dur": 0.75,
+    "pan": 0.2
+   },
+   {
+    "type": "thump",
+    "t": 13.38,
+    "gain": 0.6,
+    "dur": 0.3,
+    "f": 120
+   },
+   {
+    "type": "whoosh",
+    "t": 13.45,
+    "gain": 0.45,
+    "dur": 1.4,
+    "lo": 200,
+    "hi": 1800,
+    "pan": -0.3
+   },
+   {
+    "type": "thump",
+    "t": 14.85,
+    "gain": 0.8,
+    "dur": 0.4,
+    "f": 140,
+    "pan": -0.4
+   },
+   {
+    "type": "hit",
+    "t": 14.85,
+    "gain": 0.8,
+    "dur": 1.6,
+    "f": 48,
+    "click": 0.6
+   },
+   {
+    "type": "thump",
+    "t": 15.45,
+    "gain": 0.7,
+    "dur": 0.4,
+    "f": 70,
+    "pan": -0.4
+   },
+   {
+    "type": "splash",
+    "t": 15.45,
+    "gain": 0.8,
+    "pan": -0.4
+   },
+   {
+    "type": "whoosh",
+    "t": 18.1,
+    "gain": 0.35,
+    "dur": 1.6,
+    "lo": 300,
+    "hi": 1500,
+    "pan": 0.5
+   },
+   {
+    "type": "thump",
+    "t": 19.8,
+    "gain": 0.8,
+    "dur": 0.35,
+    "f": 110
+   },
+   {
+    "type": "hit",
+    "t": 19.8,
+    "gain": 0.6,
+    "dur": 1.4,
+    "f": 52,
+    "click": 0.6
+   },
+   {
+    "type": "thump",
+    "t": 23.82,
+    "gain": 0.9,
+    "dur": 0.3,
+    "f": 130
+   },
+   {
+    "type": "whoosh",
+    "t": 23.85,
+    "gain": 0.6,
+    "dur": 1.6,
+    "lo": 250,
+    "hi": 3500,
+    "pan": 0.3
+   },
+   {
+    "type": "hit",
+    "t": 26.75,
+    "gain": 1.0,
+    "dur": 2.2,
+    "f": 44,
+    "click": 0.8
+   },
+   {
+    "type": "whoosh",
+    "t": 28.3,
+    "gain": 0.25,
+    "dur": 2.6,
+    "lo": 3000,
+    "hi": 300
+   },
+   {
+    "type": "whoosh",
+    "t": 30.1,
+    "gain": 0.35,
+    "dur": 0.9,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "footsteps",
+    "t": 25.0,
+    "n": 12,
+    "step": 0.135,
+    "gain": 0.5
+   },
+   {
+    "type": "heartbeat",
+    "t": 17.4,
+    "until": 23.1,
+    "period": 0.9,
+    "gain": 0.55
+   }
+  ]
+ },
+ "publish": {
+  "title": "What If a 41-Year-Old Keeper Won the Final?",
+  "description": "He was 41. His hand was broken. And the keeper chasing the ball was his son.\nWhat If FC — animated football what-ifs. Fictional story, original characters.\n\nCelebrate first or hug your son first? 👇\n\n#football #whatiffc #shorts",
+  "hashtags": [
+   "#football",
+   "#aifootball",
+   "#WhatIfFC"
+  ],
+  "tags": [
+   "what if football",
+   "goalkeeper goal",
+   "football animation",
+   "football short film",
+   "football father son",
+   "what if fc"
+  ],
+  "pinned_comment": "Read his tape 👀 Should Part 2 be the son's side of this match?"
+ }
+}

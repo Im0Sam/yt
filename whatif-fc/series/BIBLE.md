@@ -23,6 +23,22 @@ highlight word. The hook text sits at the top for the first ~3 s.
 5. A loop line whose last image or sentence flows back into frame 1.
 6. A debate question in the description and a pinned comment that points at a hidden detail.
 
+## Retention rules (learned from ep001 analytics)
+ep001 on TikTok: 752 views, 7.4 s average watch of 31 s, 11% full watches. Retention was 66% at 1 s, 44% at 3 s,
+26% at 5 s and 18% at 8 s, then almost flat (9% at the end). On Instagram, 50% of viewers skipped in the first 3 s.
+**Almost all the loss is in the first 5 seconds; viewers who reach 8 s stay.** So:
+1. **Frame 1 moves.** Open on an impact or action that lands within 0.5 s (net bulge, catch, collision) with a hit
+   sound. Don't open on a static or abstract image.
+2. **Hook text and the first narration line say the same thing** (or the VO directly answers the text). Two different
+   messages in the first 2 s split attention.
+3. **No slow "Ten minutes earlier…" bridge.** The 2–6 s promise must keep moving: a whip-in, fast cut or new information.
+   Cut at least every 2 s until 8 s.
+4. **End with a rewatch prompt tied to the planted detail** ("Watch again. Look at his tape."), which drives replays.
+5. **Debate question is binary** (YES or NO, A or B) in both the description and the pinned comment. ep001's open question
+   got 0 comments.
+6. Re-check these numbers each run (Windsor `get_data`: instagram `media_reel_skip_rate`, `media_reel_avg_watch_time`;
+   tiktok_organic `video_view_retention_*`, `video_full_watched_rate`) and record them in `log.json` → `analytics`.
+
 ## Guardrails (hard rules)
 - No real players, coaches, clubs, crests, sponsor logos, league or FIFA/World Cup branding, or real trophies.
   Say "the final", not "the World Cup final".

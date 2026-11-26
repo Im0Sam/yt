@@ -88,5 +88,44 @@
       "name": "Cortex",
       "note": "comments only, no upload via Windsor"
     }
+  },
+  "analytics": {
+    "ep001-el-viejo": {
+      "checked": "2026-11-26",
+      "instagram": {
+        "permalink": "https://www.instagram.com/reel/DgKp1U4v0eE/",
+        "views": 164,
+        "reach": 131,
+        "avg_watch_s": 8.6,
+        "skip_rate_3s": 0.504,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0
+      },
+      "tiktok": {
+        "video_id": "7712106998359149846",
+        "views": 752,
+        "avg_watch_s": 7.39,
+        "full_watch_rate": 0.112,
+        "likes": 8,
+        "comments": 0,
+        "shares": 1,
+        "favorites": 1,
+        "new_followers": 1,
+        "retention": {
+          "1": 0.66,
+          "2": 0.51,
+          "3": 0.44,
+          "4": 0.35,
+          "5": 0.26,
+          "8": 0.18,
+          "13": 0.15,
+          "20": 0.11,
+          "31": 0.09
+        }
+      },
+      "takeaway": "74% gone by 5 s (static abstract opener + slow 'Ten minutes earlier' bridge); flat after 8 s. 0 organic comments on an open question."
+    }
   }
 }

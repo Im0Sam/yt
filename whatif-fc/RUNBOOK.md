@@ -37,6 +37,11 @@ connector (ToolSearch `windsor`). Call `execute_action` with the connector, acti
 5. Only post episode videos. Never delete or edit existing posts and never reply to comments, except the one pinned-comment
    post per episode described above.
 
+## 1b. Analytics
+Pull the latest stats for every posted episode (fields listed in BIBLE.md → Retention rules) and store them in
+`log.json` → `analytics.<slug>` with the date. Apply BIBLE.md's retention rules to the episode you build next; if new
+data contradicts a rule, update the rule.
+
 ## 2. Build the next episode
 1. Pick the next unbuilt episode from the active arc's `outline`. If the arc is complete, mark it `"status": "done"`,
    write a **new arc** per the bible (premise, 5–7 episode outline, any new characters added to BIBLE.md),

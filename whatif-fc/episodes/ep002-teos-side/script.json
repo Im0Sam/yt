@@ -10,35 +10,35 @@
   "line1": "DID HE LET",
   "line2": "HIS DAD SCORE?",
   "until": 3.0,
-  "pulse_at": 0.5
+  "pulse_at": 0.35
  },
  "lines": [
   {
-   "text": "He had one job.",
-   "caption": "HE HAD ONE JOB.",
+   "text": "He could have stopped it.",
+   "caption": "HE COULD HAVE STOPPED IT.",
    "hl": [
-    "JOB"
+    "STOPPED"
    ],
-   "anchor": 0.05,
+   "anchor": 0.4,
+   "speed": 1.15
+  },
+  {
+   "text": "Three steps away.",
+   "caption": "THREE STEPS AWAY.",
+   "hl": [
+    "THREE"
+   ],
+   "anchor": 1.55,
    "speed": 1.1
   },
   {
-   "text": "Stop his own father.",
-   "caption": "STOP HIS OWN FATHER.",
+   "text": "Same final. His dad at the other end.",
+   "caption": "SAME FINAL. HIS DAD AT THE OTHER END.",
    "hl": [
-    "FATHER"
+    "DAD"
    ],
-   "anchor": 1.3,
-   "speed": 1.1
-  },
-  {
-   "text": "Same final. The other end of the pitch.",
-   "caption": "SAME FINAL. THE OTHER END OF THE PITCH.",
-   "hl": [
-    "OTHER"
-   ],
-   "anchor": 3.1,
-   "speed": 1.1
+   "anchor": 3.05,
+   "speed": 1.15
   },
   {
    "text": "Ninety-ninth minute. One all.",
@@ -150,13 +150,13 @@
    "speed": 1.05
   },
   {
-   "text": "Ask him, and he'll only say...",
-   "caption": "ASK HIM, AND HE'LL ONLY SAY…",
+   "text": "The answer's on his wrist tape. Watch again.",
+   "caption": "THE ANSWER'S ON HIS WRIST TAPE. WATCH AGAIN.",
    "hl": [
-    "SAY"
+    "TAPE"
    ],
-   "anchor": 28.9,
-   "speed": 1.0
+   "anchor": 28.75,
+   "speed": 1.15
   }
  ],
  "sound": {
@@ -164,7 +164,19 @@
   "crowd": [
    [
     0,
-    0.04
+    0.08
+   ],
+   [
+    0.35,
+    0.08
+   ],
+   [
+    0.45,
+    0.7
+   ],
+   [
+    1.4,
+    0.25
    ],
    [
     3.0,
@@ -318,10 +330,38 @@
   "events": [
    {
     "type": "thump",
-    "t": 0.0,
-    "gain": 0.5,
+    "t": 0.35,
+    "gain": 0.9,
     "dur": 0.4,
-    "f": 60
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 0.35,
+    "gain": 1.0,
+    "dur": 1.8,
+    "f": 44,
+    "click": 0.8
+   },
+   {
+    "type": "splash",
+    "t": 0.35,
+    "gain": 0.6
+   },
+   {
+    "type": "whoosh",
+    "t": 1.3,
+    "gain": 0.35,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 1.4,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 70
    },
    {
     "type": "whoosh",
@@ -338,6 +378,14 @@
     "gain": 0.45,
     "dur": 0.3,
     "f": 90
+   },
+   {
+    "type": "whoosh",
+    "t": 3.0,
+    "gain": 0.5,
+    "dur": 0.45,
+    "lo": 300,
+    "hi": 4000
    },
    {
     "type": "whoosh",
@@ -576,7 +624,7 @@
  },
  "publish": {
   "title": "What If the Keeper Let His Dad Score?",
-  "description": "Same final. Other end of the pitch. Teo was the fastest player out there... so why did he slow down three steps from the ball?\nWhat If FC, Part 2 of El Viejo.\nFictional story. Animated, original characters.\n\nDid he let his dad win? 👇\n\n#football #whatiffc #shorts",
+  "description": "He could have stopped it. He was three steps away. So why did the fastest player on the pitch slow down?\nWhat If FC, Part 2 of El Viejo.\nFictional story. Animated, original characters.\n\nDid he let his dad score? YES or NO 👇\n\n#football #whatiffc #shorts",
   "hashtags": [
    "#football",
    "#goalkeeper",
@@ -591,6 +639,6 @@
    "what if fc",
    "el viejo part 2"
   ],
-  "pinned_comment": "Pause at 0:09 and read Teo's wrist tape 👀 Did he slow down on purpose?"
+  "pinned_comment": "Pause at 0:09 and read Teo's wrist tape 👀 YES or NO: did he let his dad score?"
  }
 }

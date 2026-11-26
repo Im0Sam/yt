@@ -84,8 +84,12 @@ def kneel_shot(c, t, zm, drop):
 
 
 def s1(c, t, f):
-    kneel_shot(c, t, 1.0 + 0.06 * ease(t / 3.0), 1.0)
-    return 0.0
+    # Hook: open ON the impact (ball slams the net at 0.35 s), then cut to him on his knees.
+    # ep001 lost 56% of TikTok viewers by 3 s on a static opener, so frame 1 now moves.
+    if t < 1.4:
+        return s7a(c, t, t + (T_NET - 0.35))
+    kneel_shot(c, t, 1.0 + 0.07 * ease((t - 1.4) / 1.6), 1.0)
+    return 0.25 * math.exp(-(t - 1.4) * 12)
 
 
 # =============================================================== S2 3.0-5.8 reverse telephoto: the other end
@@ -94,7 +98,7 @@ def s2(c, t, f):
     cam = Cam(horizon=980, F=3600, h=1.4)
     vx, vy = cam.p(0, 74.3)
     c.save()
-    zoom(c, 1 + 0.18 * ease(lt / 2.8), vx, vy - 60)
+    zoom(c, 1 + 0.45 * ease_out(lt / 0.5) + 0.2 * ease(lt / 2.8), vx, vy - 60)  # whip-in on Dad
     sky(c, '#02040a', '#0d1828', 0, 980)
     stands(c, 560, 975, t, seed=131, n=1000, blur=1.5, cheer=0.4)
     floodlight(c, 830, 360, t, 1.15, beam_to=(600, 1200))

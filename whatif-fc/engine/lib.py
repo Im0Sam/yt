@@ -332,6 +332,8 @@ KITS = {
                  glove=None, trim=None, hair='#151515', beard=None, streak=None),
     'coach': dict(jersey='#14171c', sleeve='#14171c', shorts='#101216', socks='#101216', skin='#30231b',
                   glove=None, trim=None, hair='#202020', beard=None, streak=None, coat=True),
+    'viejo_young': dict(jersey='#2e333b', sleeve='#262a31', shorts='#121417', socks='#2e333b', skin='#3a2a20',
+                        glove='#0c0c0e', trim='#9aa3ad', hair='#1c1c1c', beard='#262422', streak='#262422'),
     'shadow': dict(jersey='#07090c', sleeve='#07090c', shorts='#07090c', socks='#07090c', skin='#07090c',
                    glove='#07090c', trim=None, hair='#07090c', beard=None, streak=None),
 }
@@ -498,8 +500,8 @@ SON_PROFILE = [(250, 1010), (262, 800), (215, 600), (225, 380), (320, 235), (470
                (548, 900), (536, 1010)]
 
 
-def profile(c, x, y, s, t, who='viejo', face=1, rim_col='#ffcf8f', rim_a=1.0, look_up=0.0, breath=0.0):
-    """Big profile close-up. (x,y) = top-left of 1000-unit box; s scale."""
+def profile(c, x, y, s, t, who='viejo', face=1, rim_col='#ffcf8f', rim_a=1.0, look_up=0.0, breath=0.0, young=False):
+    """Big profile close-up. (x,y) = top-left of 1000-unit box; s scale. young=True: El Viejo before the grey/white streak."""
     pts = VIEJO_PROFILE if who == 'viejo' else SON_PROFILE
     c.save()
     c.translate(x, y)
@@ -524,7 +526,7 @@ def profile(c, x, y, s, t, who='viejo', face=1, rim_col='#ffcf8f', rim_a=1.0, lo
     c.clipPath(path, doAntiAlias=True)
     r = rng_for(3 if who == 'viejo' else 4)
     # hair
-    hair_cols = ['#2a2a2a', '#9a9792', '#4a4844'] if who == 'viejo' else ['#141414', '#1f1f1f']
+    hair_cols = (['#1c1c1c', '#2a2a2a'] if young else ['#2a2a2a', '#9a9792', '#4a4844']) if who == 'viejo' else ['#141414', '#1f1f1f']
     for i in range(420):
         hx = 220 + r.random() * 380
         hy = 180 + r.random() * 200 * (1 - (hx - 220) / 700)
@@ -543,8 +545,8 @@ def profile(c, x, y, s, t, who='viejo', face=1, rim_col='#ffcf8f', rim_a=1.0, lo
             by = 640 + r.random() * 320
             if not bp.contains(bx, by):
                 continue
-            streak = bx < 590 and 690 < by < 930 and r.random() < 0.65
-            cc = '#d9d5cd' if streak else ('#5c5751' if r.random() < 0.35 else '#2c2723')
+            streak = (not young) and bx < 590 and 690 < by < 930 and r.random() < 0.65
+            cc = '#d9d5cd' if streak else ('#3a3632' if young else ('#5c5751' if r.random() < 0.35 else '#2c2723'))
             c.drawLine(bx, by, bx - 3 + r.random() * 6, by + 12 + r.random() * 10,
                        paint(cc, 0.55 if streak else 0.5, stroke=2.4))
     else:
@@ -560,7 +562,7 @@ def profile(c, x, y, s, t, who='viejo', face=1, rim_col='#ffcf8f', rim_a=1.0, lo
     c.drawPath(eye, paint('#050505'))
     c.drawCircle(634, 485, 4.5, paint('#ffffff', 0.9))
     c.drawLine(592, 466, 650, 462, paint('#0a0807', 1, stroke=9))  # brow
-    if who == 'viejo':
+    if who == 'viejo' and not young:
         for i in range(30):
             bx = 596 + r.random() * 54
             c.drawLine(bx, 460 + r.random() * 6, bx + 6, 452 + r.random() * 6, paint('#8d8780', 0.5, stroke=1.6))

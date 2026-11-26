@@ -12,6 +12,8 @@ highlight word. The hook text sits at the top for the first ~3 s.
   white streak on the left side. He wears a plain charcoal keeper kit with #1 and no logos, plus black gloves, and has white tape on his right hand with "TEO" written on it.
   He is quiet and stubborn and says little.
 - **Teo**: El Viejo's son, early 20s. He is the opposing team's keeper and wears a lime kit. He has the same nose and eyes as his dad and no beard.
+- **Young Teo (flashback, age 8):** same lime kit, gloves too big for him; small puppet (about 1.3 m) in a full-size goal.
+- **El Viejo at 27 (flashback):** same charcoal #1 kit, full dark beard with no white streak yet (`kit='viejo_young'`, `profile(..., young=True)`).
 - **Teams (fictional, no names needed):** El Viejo's side wears navy outfield kits and the opponents wear crimson.
 - New arcs may add new original characters. Each one gets a one-line visual description added here.
 
@@ -36,7 +38,11 @@ ep001 on TikTok: 752 views, 7.4 s average watch of 31 s, 11% full watches. Reten
 4. **End with a rewatch prompt tied to the planted detail** ("Watch again. Look at his tape."), which drives replays.
 5. **Debate question is binary** (YES or NO, A or B) in both the description and the pinned comment. ep001's open question
    got 0 comments.
-6. Re-check these numbers each run (Windsor `get_data`: instagram `media_reel_skip_rate`, `media_reel_avg_watch_time`;
+6. **Confirmed by ep002 (moving hook, binary question, rewatch prompt):** Instagram skip rate fell from 49% to 27%,
+   average watch rose from 8.6 s to 19.0 s, views were 11x and it got 4 comments. On TikTok full watches went from 11.5% to
+   19.7% and 8 s retention from 18% to 26%. The biggest drop is still between 1 s and 4 s (76% to 39%), so the 1–4 s
+   stretch needs a second reveal or a hard cut on the hook's answer, not just a moving first frame.
+7. Re-check these numbers each run (Windsor `get_data`: instagram `media_reel_skip_rate`, `media_reel_avg_watch_time`;
    tiktok_organic `video_view_retention_*`, `video_full_watched_rate`) and record them in `log.json` → `analytics`.
 
 ## Guardrails (hard rules)

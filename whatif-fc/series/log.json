@@ -1,5 +1,5 @@
 {
-  "post_time_note": "Daily scheduled task. Each run posts the oldest 'ready' episode, then builds the next one as 'ready'.",
+  "post_time_note": "Daily scheduled task. Each run posts the oldest 'ready' episode, then builds the next one as 'ready'. 2026-11-26 evening run: ep002 had already gone out that day, so nothing was posted; ep003 was built for 2026-11-27.",
   "arcs": [
     {
       "id": "arc01-el-viejo",
@@ -93,10 +93,21 @@
         "tiktok": {
           "video_id": "7712423671926738198",
           "posted": "2026-11-26",
-          "by": "Samir (manual)"
+          "by": "Samir (manual)",
+          "note": "Posted by Samir; Buffer shows it as a network post (6b0812f61738b7c5d798e501)."
         }
       },
       "note": "Re-cut 2026-11-26 before posting: moving hook (net impact at 0.35 s), whip-in at 3 s, binary debate question, rewatch ending."
+    },
+    {
+      "ep": "ep003",
+      "slug": "ep003-the-tape",
+      "arc": "arc01-el-viejo",
+      "status": "ready",
+      "built": "2026-11-26",
+      "video": "whatif-fc/videos/ep003-the-tape.mp4",
+      "duration_s": 33.0,
+      "note": "Flashback: Teo's first match (age 8), dad played his own final. Dad writes TEO on his tape that night; reveal: Teo had written a '1' on his own (pays off ep002's planted '1'). Plant: marker in sleeping Teo's glove at ~0:19. Hook text = first VO line; cuts every ~1.5-2.4 s to 9.4 s."
     }
   ],
   "accounts": {
@@ -128,13 +139,13 @@
   },
   "analytics": {
     "ep001-el-viejo": {
-      "checked": "2026-11-26",
+      "checked": "2026-11-26 (evening)",
       "instagram": {
         "permalink": "https://www.instagram.com/reel/DgKp1U4v0eE/",
-        "views": 164,
-        "reach": 131,
+        "views": 170,
+        "reach": 135,
         "avg_watch_s": 8.6,
-        "skip_rate_3s": 0.504,
+        "skip_rate_3s": 0.493,
         "likes": 1,
         "comments": 1,
         "shares": 0,
@@ -142,10 +153,10 @@
       },
       "tiktok": {
         "video_id": "7712106998359149846",
-        "views": 752,
-        "avg_watch_s": 7.39,
-        "full_watch_rate": 0.112,
-        "likes": 8,
+        "views": 756,
+        "avg_watch_s": 7.49,
+        "full_watch_rate": 0.115,
+        "likes": 9,
         "comments": 0,
         "shares": 1,
         "favorites": 1,
@@ -163,6 +174,44 @@
         }
       },
       "takeaway": "74% gone by 5 s (static abstract opener + slow 'Ten minutes earlier' bridge); flat after 8 s. 0 organic comments on an open question."
+    },
+    "ep002-teos-side": {
+      "checked": "2026-11-26 (evening, ~7 h after posting)",
+      "instagram": {
+        "permalink": "https://www.instagram.com/reel/DgMvPsyhMto/",
+        "views": 1864,
+        "reach": 1186,
+        "avg_watch_s": 19.0,
+        "skip_rate_3s": 0.266,
+        "likes": 27,
+        "comments": 4,
+        "shares": 0,
+        "saves": 0
+      },
+      "tiktok": {
+        "video_id": "7712423671926738198",
+        "views": 698,
+        "avg_watch_s": 10.79,
+        "full_watch_rate": 0.197,
+        "likes": 8,
+        "comments": 1,
+        "shares": 0,
+        "favorites": 0,
+        "new_followers": 0,
+        "retention": {
+          "1": 0.76,
+          "2": 0.59,
+          "3": 0.47,
+          "4": 0.39,
+          "5": 0.33,
+          "8": 0.26,
+          "13": 0.22,
+          "20": 0.18,
+          "31": 0.15
+        }
+      },
+      "youtube": "no rows yet in Windsor (posted 11:08 UTC; YouTube analytics lag ~1-2 days)",
+      "takeaway": "Moving hook + binary question worked: IG skip rate 49%->27%, avg watch 8.6->19.0 s, 11x the views, 4 comments. TikTok full-watch 11.5%->19.7%, 8 s retention 18%->26%. Biggest loss is still 1-4 s (76%->39%)."
     }
   }
 }

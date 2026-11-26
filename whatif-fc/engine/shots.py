@@ -616,3 +616,60 @@ def s7(c, t, f):
     return 0.0
 
 
+
+
+# =============================================================== helpers promoted from ep002 (back views)
+def head_pos(pose, x, y, s, face=1, rot=0.0):
+    """Screen position of a puppet's head centre."""
+    dt = D(pose['torso'])
+    nx, ny = dt[0] * 62, dt[1] * 62
+    dh = D(pose['torso'] + pose['head'])
+    hx, hy = nx + dh[0] * 14, ny + dh[1] * 14
+    lx, ly = hx * face * s, hy * s
+    r = math.radians(rot)
+    return x + lx * math.cos(r) - ly * math.sin(r), y + lx * math.sin(r) + ly * math.cos(r)
+
+
+def back_view(c, pose, x, y, s, kit='son', **kw):
+    """Puppet seen from behind: draw the figure, then cover the face with hair."""
+    hands = figure(c, pose, x, y, s, kit=kit, front=True, beard=False, **kw)
+    hx, hy = head_pos(pose, x, y, s, rot=kw.get('rot', 0.0))
+    c.drawCircle(hx, hy + 0.5 * s, 12.8 * s, paint(KITS[kit]['hair'], kw.get('alpha', 1.0), blur=kw.get('blur', 0)))
+    return hands
+
+
+def umbrella(c, x, y, r, a=1.0, rim='#ffd49a', tilt=0.0):
+    """Dark umbrella canopy centred at (x, y) (top of the handle), radius r, rim-lit on top."""
+    c.save()
+    c.translate(x, y)
+    c.rotate(tilt)
+    path = skia.Path()
+    path.moveTo(-r, 0)
+    path.cubicTo(-r, -r * 0.9, r, -r * 0.9, r, 0)
+    for k in range(4, 0, -1):
+        xa, xb = -r + 2 * r * k / 4, -r + 2 * r * (k - 1) / 4
+        path.quadTo((xa + xb) / 2, -r * 0.14, xb, 0)
+    path.close()
+    c.save(); c.translate(0, -5); c.drawPath(path, paint(rim, 0.55 * a)); c.restore()
+    c.drawPath(path, paint('#07090d', a))
+    c.drawLine(0, 0, 0, r * 0.95, paint('#07090d', a, stroke=max(2, r * 0.05)))
+    c.restore()
+
+
+def chain_fence(c, x0, x1, y0, y1, cell=46, a=0.4, blur=0, col='#9fb2c6'):
+    """Chain-link fence (diamond mesh) with posts, screen space."""
+    c.save()
+    c.clipRect(skia.Rect(x0, y0, x1, y1))
+    p = paint(col, a, stroke=2.4, blur=blur)
+    h = y1 - y0
+    xx = x0 - h
+    while xx < x1 + h:
+        c.drawLine(xx, y0, xx + h, y1, p)
+        c.drawLine(xx + h, y0, xx, y1, p)
+        xx += cell
+    c.restore()
+    pp = paint('#1a222c', 1, stroke=12, blur=blur)
+    for k in range(int((x1 - x0) / 360) + 2):
+        px = x0 + 60 + k * 360
+        c.drawLine(px, y0 - 10, px, y1, pp)
+    c.drawLine(x0, y0, x1, y0, paint('#2a3542', 1, stroke=8, blur=blur))

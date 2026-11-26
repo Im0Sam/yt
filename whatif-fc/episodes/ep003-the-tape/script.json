@@ -1,0 +1,680 @@
+{
+ "id": "ep003",
+ "slug": "ep003-the-tape",
+ "arc": "arc01-el-viejo",
+ "title_internal": "El Viejo 3: The Tape",
+ "duration": 33.0,
+ "voice": "am_michael",
+ "seed": 7,
+ "hook": {
+  "line1": "HE SAVED IT.",
+  "line2": "DAD WASN'T THERE.",
+  "until": 2.8,
+  "pulse_at": 0.35
+ },
+ "lines": [
+  {
+   "text": "He saved it.",
+   "caption": "HE SAVED IT.",
+   "hl": [
+    "SAVED"
+   ],
+   "anchor": 0.38,
+   "speed": 1.1
+  },
+  {
+   "text": "And his dad wasn't there.",
+   "caption": "AND HIS DAD WASN'T THERE.",
+   "hl": [
+    "DAD"
+   ],
+   "anchor": 1.3,
+   "speed": 1.15
+  },
+  {
+   "text": "Fourteen years ago. Teo's first match.",
+   "caption": "14 YEARS AGO. TEO'S FIRST MATCH.",
+   "hl": [
+    "FIRST"
+   ],
+   "anchor": 2.85,
+   "speed": 1.2
+  },
+  {
+   "text": "Same night, his dad had a final of his own.",
+   "caption": "SAME NIGHT, HIS DAD HAD A FINAL OF HIS OWN.",
+   "hl": [
+    "FINAL"
+   ],
+   "anchor": 5.25,
+   "speed": 1.2
+  },
+  {
+   "text": "He picked his game.",
+   "caption": "HE PICKED HIS GAME.",
+   "hl": [
+    "PICKED"
+   ],
+   "anchor": 7.6,
+   "speed": 1.0
+  },
+  {
+   "text": "Last minute. Penalty.",
+   "caption": "LAST MINUTE. PENALTY.",
+   "hl": [
+    "PENALTY"
+   ],
+   "anchor": 9.5,
+   "speed": 1.15
+  },
+  {
+   "text": "Teo saved it, and looked at the fence.",
+   "caption": "TEO SAVED IT… AND LOOKED AT THE FENCE.",
+   "hl": [
+    "FENCE"
+   ],
+   "anchor": 12.1,
+   "speed": 1.15
+  },
+  {
+   "text": "One empty spot. Where his dad always stood.",
+   "caption": "ONE EMPTY SPOT. WHERE HIS DAD ALWAYS STOOD.",
+   "hl": [
+    "EMPTY"
+   ],
+   "anchor": 14.3,
+   "speed": 1.1
+  },
+  {
+   "text": "Midnight. Teo asleep in his gloves.",
+   "caption": "MIDNIGHT. TEO ASLEEP IN HIS GLOVES.",
+   "hl": [
+    "GLOVES"
+   ],
+   "anchor": 17.7,
+   "speed": 1.1
+  },
+  {
+   "text": "So he wrote his son's name on his tape.",
+   "caption": "SO HE WROTE HIS SON'S NAME ON HIS TAPE.",
+   "hl": [
+    "NAME"
+   ],
+   "anchor": 20.45,
+   "speed": 1.15
+  },
+  {
+   "text": "Never played without it since.",
+   "caption": "NEVER PLAYED WITHOUT IT SINCE.",
+   "hl": [
+    "NEVER"
+   ],
+   "anchor": 22.45,
+   "speed": 1.15
+  },
+  {
+   "text": "What he never knew...",
+   "caption": "WHAT HE NEVER KNEW…",
+   "hl": [
+    "KNEW"
+   ],
+   "anchor": 23.75,
+   "speed": 1.05
+  },
+  {
+   "text": "Teo wrote a number on his.",
+   "caption": "TEO WROTE A NUMBER ON HIS.",
+   "hl": [
+    "NUMBER"
+   ],
+   "anchor": 25.0,
+   "speed": 1.1
+  },
+  {
+   "text": "His dad's.",
+   "caption": "HIS DAD'S.",
+   "hl": [
+    "DAD'S"
+   ],
+   "anchor": 26.95,
+   "speed": 0.95
+  },
+  {
+   "text": "Fourteen years later, both still wear them.",
+   "caption": "14 YEARS LATER, BOTH STILL WEAR THEM.",
+   "hl": [
+    "BOTH"
+   ],
+   "anchor": 28.45,
+   "speed": 1.2
+  },
+  {
+   "text": "Watch again. Look at his hand.",
+   "caption": "WATCH AGAIN. LOOK AT HIS HAND.",
+   "hl": [
+    "HAND"
+   ],
+   "anchor": 30.8,
+   "speed": 1.15
+  }
+ ],
+ "sound": {
+  "rain": 1.0,
+  "crowd": [
+   [
+    0,
+    0.06
+   ],
+   [
+    0.35,
+    0.06
+   ],
+   [
+    0.45,
+    0.35
+   ],
+   [
+    1.4,
+    0.12
+   ],
+   [
+    2.8,
+    0.08
+   ],
+   [
+    5.2,
+    0.1
+   ],
+   [
+    5.3,
+    0.75
+   ],
+   [
+    7.2,
+    0.4
+   ],
+   [
+    7.3,
+    0.12
+   ],
+   [
+    9.4,
+    0.15
+   ],
+   [
+    11.9,
+    0.15
+   ],
+   [
+    12.05,
+    0.45
+   ],
+   [
+    13.5,
+    0.2
+   ],
+   [
+    14.2,
+    0.06
+   ],
+   [
+    17.6,
+    0.0
+   ],
+   [
+    28.4,
+    0.0
+   ],
+   [
+    28.5,
+    0.25
+   ],
+   [
+    30.6,
+    0.1
+   ],
+   [
+    33.0,
+    0.08
+   ]
+  ],
+  "drone": [
+   [
+    0,
+    0.08
+   ],
+   [
+    2.8,
+    0.06
+   ],
+   [
+    7.3,
+    0.12
+   ],
+   [
+    11.9,
+    0.12
+   ],
+   [
+    14.2,
+    0.18
+   ],
+   [
+    17.6,
+    0.14
+   ],
+   [
+    23.6,
+    0.26
+   ],
+   [
+    27.0,
+    0.32
+   ],
+   [
+    28.4,
+    0.2
+   ],
+   [
+    33.0,
+    0.1
+   ]
+  ],
+  "drone_hz": [
+   [
+    0,
+    55
+   ],
+   [
+    14.2,
+    55
+   ],
+   [
+    23.6,
+    58.3
+   ],
+   [
+    26.0,
+    61.7
+   ],
+   [
+    27.0,
+    65.4
+   ],
+   [
+    28.4,
+    55
+   ],
+   [
+    33.0,
+    55
+   ]
+  ],
+  "events": [
+   {
+    "type": "whoosh",
+    "t": 0.0,
+    "gain": 0.4,
+    "dur": 0.35,
+    "lo": 3000,
+    "hi": 400
+   },
+   {
+    "type": "thump",
+    "t": 0.35,
+    "gain": 0.9,
+    "dur": 0.4,
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 0.35,
+    "gain": 1.0,
+    "dur": 1.6,
+    "f": 46,
+    "click": 0.8
+   },
+   {
+    "type": "splash",
+    "t": 0.35,
+    "gain": 0.6
+   },
+   {
+    "type": "whoosh",
+    "t": 1.35,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 1.5,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "whoosh",
+    "t": 2.65,
+    "gain": 0.35,
+    "dur": 0.4,
+    "lo": 400,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 2.8,
+    "gain": 0.55,
+    "dur": 0.3,
+    "f": 90
+   },
+   {
+    "type": "whoosh",
+    "t": 2.8,
+    "gain": 0.5,
+    "dur": 0.45,
+    "lo": 300,
+    "hi": 4000
+   },
+   {
+    "type": "whoosh",
+    "t": 5.05,
+    "gain": 0.3,
+    "dur": 0.35,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 5.2,
+    "gain": 0.6,
+    "dur": 0.35,
+    "f": 85
+   },
+   {
+    "type": "footsteps",
+    "t": 5.3,
+    "n": 10,
+    "step": 0.2,
+    "gain": 0.35
+   },
+   {
+    "type": "whoosh",
+    "t": 7.15,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 7.3,
+    "gain": 0.4,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "thump",
+    "t": 9.4,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 90
+   },
+   {
+    "type": "whistle",
+    "t": 9.45,
+    "gain": 0.6,
+    "dur": 0.45,
+    "pan": 0.3
+   },
+   {
+    "type": "footsteps",
+    "t": 9.65,
+    "n": 9,
+    "step": 0.18,
+    "gain": 0.4
+   },
+   {
+    "type": "thump",
+    "t": 11.35,
+    "gain": 0.8,
+    "dur": 0.3,
+    "f": 130
+   },
+   {
+    "type": "whoosh",
+    "t": 11.37,
+    "gain": 0.5,
+    "dur": 0.5,
+    "lo": 300,
+    "hi": 3500
+   },
+   {
+    "type": "thump",
+    "t": 11.97,
+    "gain": 0.9,
+    "dur": 0.4,
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 11.97,
+    "gain": 0.9,
+    "dur": 1.4,
+    "f": 50,
+    "click": 0.7
+   },
+   {
+    "type": "splash",
+    "t": 11.97,
+    "gain": 0.55
+   },
+   {
+    "type": "whoosh",
+    "t": 14.05,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 14.2,
+    "gain": 0.4,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "heartbeat",
+    "t": 14.4,
+    "until": 17.4,
+    "period": 0.85,
+    "gain": 0.4
+   },
+   {
+    "type": "whoosh",
+    "t": 17.45,
+    "gain": 0.25,
+    "dur": 0.5,
+    "lo": 3000,
+    "hi": 300
+   },
+   {
+    "type": "whoosh",
+    "t": 17.8,
+    "gain": 0.35,
+    "dur": 0.9,
+    "lo": 150,
+    "hi": 600
+   },
+   {
+    "type": "thump",
+    "t": 18.7,
+    "gain": 0.3,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "thump",
+    "t": 20.4,
+    "gain": 0.35,
+    "dur": 0.25,
+    "f": 70
+   },
+   {
+    "type": "whoosh",
+    "t": 20.75,
+    "gain": 0.18,
+    "dur": 0.3,
+    "lo": 3500,
+    "hi": 6000
+   },
+   {
+    "type": "whoosh",
+    "t": 21.2,
+    "gain": 0.18,
+    "dur": 0.3,
+    "lo": 3500,
+    "hi": 6000
+   },
+   {
+    "type": "whoosh",
+    "t": 21.65,
+    "gain": 0.18,
+    "dur": 0.3,
+    "lo": 3500,
+    "hi": 6000
+   },
+   {
+    "type": "whoosh",
+    "t": 22.1,
+    "gain": 0.18,
+    "dur": 0.3,
+    "lo": 3500,
+    "hi": 6000
+   },
+   {
+    "type": "whoosh",
+    "t": 23.45,
+    "gain": 0.25,
+    "dur": 0.5,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 24.55,
+    "gain": 0.55,
+    "dur": 0.25,
+    "f": 200
+   },
+   {
+    "type": "thump",
+    "t": 24.8,
+    "gain": 0.35,
+    "dur": 0.2,
+    "f": 220
+   },
+   {
+    "type": "thump",
+    "t": 24.95,
+    "gain": 0.2,
+    "dur": 0.2,
+    "f": 240
+   },
+   {
+    "type": "heartbeat",
+    "t": 25.0,
+    "until": 26.9,
+    "period": 0.6,
+    "gain": 0.5
+   },
+   {
+    "type": "whoosh",
+    "t": 26.6,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 400,
+    "hi": 2500,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 27.0,
+    "gain": 0.85,
+    "dur": 0.4,
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 27.0,
+    "gain": 1.0,
+    "dur": 2.0,
+    "f": 44,
+    "click": 0.8
+   },
+   {
+    "type": "whoosh",
+    "t": 28.25,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 28.4,
+    "gain": 0.5,
+    "dur": 0.3,
+    "f": 80
+   },
+   {
+    "type": "whoosh",
+    "t": 30.45,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 30.6,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "whoosh",
+    "t": 32.4,
+    "gain": 0.35,
+    "dur": 0.6,
+    "lo": 300,
+    "hi": 3000,
+    "rev": true
+   }
+  ]
+ },
+ "publish": {
+  "title": "What If He Missed His Son's First Match?",
+  "description": "He saved a penalty in his first ever match. His dad wasn't there to see it. That night, two names went on two wrists.\nWhat If FC, Part 3 of El Viejo.\nFictional story. Animated, original characters.\n\nWas his dad right to play his own final? YES or NO 👇\n\n#football #whatiffc #shorts",
+  "hashtags": [
+   "#football",
+   "#goalkeeper",
+   "#WhatIfFC"
+  ],
+  "tags": [
+   "what if football",
+   "goalkeeper",
+   "football animation",
+   "football short film",
+   "football father son",
+   "what if fc",
+   "el viejo part 3"
+  ],
+  "pinned_comment": "Pause at 0:19 👀 What's in Teo's hand? Then check his wrist in Part 2. YES or NO: was his dad right to play his own final?"
+ }
+}

@@ -1,8 +1,8 @@
 # What If FC: daily run
 
-Each scheduled run **posts the oldest `ready` episode** to YouTube Shorts and Instagram through Windsor.ai, and sends
-the video to Samir to post on TikTok himself (one video per platform), then **builds the next episode** so it is `ready` for tomorrow. This one-day buffer means a failed
-render never causes a missed post.
+Each scheduled run **posts the oldest `ready` episode** to YouTube Shorts and TikTok through **Buffer**, and to Instagram
+Reels through **Windsor.ai** (one video per platform), then **builds the next episode** so it is `ready` for tomorrow.
+This one-day buffer means a failed render never causes a missed post.
 
 Read `series/BIBLE.md` and `series/log.json` first. Work from the repo root (`whatif-fc/`).
 
@@ -14,28 +14,39 @@ which ffmpeg
 The voice model and font are in the repo (`models/`, `engine/fonts/`). Nothing else needs downloading.
 
 ## 1. Post
-Account ids are in `series/log.json` → `accounts`. All posting goes through the **Windsor.ai for Social Media**
-connector (ToolSearch `windsor`). Call `execute_action` with the connector, action and account given below.
+Account and channel ids are in `series/log.json` → `accounts`. Two connectors are used (find them with ToolSearch):
+- **Buffer** (ToolSearch `buffer`): YouTube and TikTok uploads. Organization `accounts.buffer.organization`, channel ids in
+  `accounts.buffer.channels`. Use `create_post` with `schedulingType "automatic"` and `mode "shareNow"`, then `get_post`
+  to read `externalLink` (the live URL).
+- **Windsor.ai for Social Media** (ToolSearch `windsor`): Instagram posting and the pinned comment, plus all analytics reads.
 
 1. **Finish partial episodes first.** For any episode with `status: "partial"`, retry only the platforms marked
    `PENDING` or `FAILED`, and never re-post a platform that already has an id.
-2. Then post the oldest `status: "ready"` episode. Its video URL is
-   `https://raw.githubusercontent.com/Im0Sam/yt/main/whatif-fc/videos/<slug>.mp4`, and `curl -sI` must return 200.
-   Metadata comes from `episodes/<slug>/script.json` → `publish`.
-   - **YouTube**: `connector "youtube"`, `action "upload_video"`, with params `video_url`, `title` (publish.title + " #Shorts", 100 characters or fewer),
-     `description` (publish.description), `tags`, `category_id "1"`, `made_for_kids false`, `privacy_status "public"`.
-     If you get "rate-limited", wait 75 s with Bash `sleep 75` and retry once. If it still fails, mark it `PENDING` and the next run retries.
-     Before any retry, check the channel's video list with `get_data` (fields video, video_title, published_at), so you never upload twice.
-   - **Instagram**: `connector "instagram"`, `action "create_video_post"`, with params `video_url`, `caption` (description +
-     hashtags, 2200 characters or fewer) and `share_to_feed true`. Then `create_comment` with `media_id` and `message` = publish.pinned_comment.
-   - **TikTok**: Windsor can't upload to TikTok. Don't try another route. Send Samir the video with SendUserFile
-     (`videos/<slug>.mp4`) plus a ready-to-paste TikTok caption, so he can post it from his phone. Record `tiktok: "MANUAL"`.
-3. Record the ids or URLs in `log.json` → `posts` with the date. Set `status` to `"posted"` once YouTube and Instagram both
-   succeeded, otherwise `"partial"`.
-4. **If Windsor is missing, unauthorised or out of trial/plan:** post nothing and tell Samir exactly what to reconnect or
-   renew. Then continue to step 2 only if fewer than 2 episodes are `ready`.
-5. Only post episode videos. Never delete or edit existing posts and never reply to comments, except the one pinned-comment
-   post per episode described above.
+2. **Check before posting, so nothing goes up twice.** Before each platform, check it doesn't already have this episode:
+   Buffer `list_posts` (that channel, status sent/sending/scheduled) and Windsor `get_data` (YouTube: video, video_title,
+   published_at; TikTok: video_id, video_caption, video_create_datetime; Instagram: media_id, media_caption). Samir sometimes
+   posts TikTok by hand. If the episode is already there, record it and skip that platform.
+3. Then post the oldest `status: "ready"` episode. Its video URL is
+   `https://raw.githubusercontent.com/Im0Sam/yt/main/whatif-fc/videos/<slug>.mp4`, and `curl -sI` must return 200 with the
+   same content-length as the local file. Metadata comes from `episodes/<slug>/script.json` → `publish`.
+   - **YouTube (Buffer)**: channel `accounts.buffer.channels.youtube`, `text` = publish.description,
+     `assets [{video:{url}}]`, `metadata.youtube {type "short", title: publish.title + " #Shorts" (100 characters or fewer),
+     categoryId "1", madeForKids false, privacy "public", isAiGenerated false}`.
+   - **TikTok (Buffer)**: channel `accounts.buffer.channels.tiktok`, `text` = a TikTok caption (description's first lines +
+     the debate question + "Fictional story, original characters." + publish.hashtags, 2200 characters or fewer),
+     `assets [{video:{url}}]`, `metadata.tiktok {title: publish.title}`.
+   - **Instagram (Windsor)**: `connector "instagram"`, `action "create_video_post"`, with params `video_url`, `caption`
+     (description + hashtags, 2200 characters or fewer) and `share_to_feed true`. Then `create_comment` with `media_id` and
+     `message` = publish.pinned_comment.
+   - If Buffer fails for a platform, mark it `PENDING` (or, for TikTok only, send Samir the file with SendUserFile and a
+     ready-to-paste caption, recording `tiktok: "MANUAL"`). Do not fall back to Windsor `upload_video` for YouTube: it was
+     rate-limited 11 times in a row in Nov 2026.
+4. Record the ids or URLs in `log.json` → `posts` with the date and `via`. Set `status` to `"posted"` once YouTube,
+   TikTok and Instagram all succeeded, otherwise `"partial"`.
+5. **If Buffer or Windsor is missing, disconnected or out of plan:** post nothing on the affected platforms and tell Samir
+   exactly what to reconnect or renew. Buffer's free plan allows 3 channels and 10 scheduled posts; `shareNow` posts are fine.
+6. Only post episode videos. Never delete or edit existing posts and never reply to comments, except the one pinned-comment
+   post per episode on Instagram described above.
 
 ## 1b. Analytics
 Pull the latest stats for every posted episode (fields listed in BIBLE.md → Retention rules) and store them in

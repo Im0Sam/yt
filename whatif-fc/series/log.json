@@ -45,7 +45,7 @@
       "ep": "ep001",
       "slug": "ep001-el-viejo",
       "arc": "arc01-el-viejo",
-      "status": "partial",
+      "status": "posted",
       "built": "2026-11-25",
       "video": "whatif-fc/videos/ep001-el-viejo.mp4",
       "posts": {
@@ -54,7 +54,14 @@
           "posted": "2026-11-25",
           "pinned_comment_id": "18196550080404687"
         },
-        "youtube": "PENDING: Windsor upload_video returned \"rate-limited\" again on 2026-11-25 17:35 and 17:37 UTC (5 failures total since 13:3x UTC). Channel list checked before each retry: not uploaded. Next run checks the channel then retries. 2026-11-26: ep002 also rate-limited twice; looks like an account/connector-level block. 2026-11-26 (Samir asked to retry): ep002 x2 and ep001 x1 rate-limited again, via both Windsor servers; channel checked, nothing uploaded. Needs Windsor YouTube reconnect or manual upload.",
+        "youtube": {
+          "video_id": "5JpBmkIsxeg",
+          "url": "https://www.youtube.com/watch?v=5JpBmkIsxeg",
+          "posted": "2026-11-26",
+          "via": "buffer",
+          "buffer_post_id": "6b0813232c18150e10497a52",
+          "note": "Windsor upload_video was rate-limited 11 times (2026-11-25/26); posted through Buffer instead."
+        },
         "tiktok": {
           "posted": "2026-11-25",
           "by": "Samir (manual)"
@@ -65,7 +72,7 @@
       "ep": "ep002",
       "slug": "ep002-teos-side",
       "arc": "arc01-el-viejo",
-      "status": "partial",
+      "status": "posted",
       "built": "2026-11-25",
       "video": "whatif-fc/videos/ep002-teos-side.mp4",
       "posts": {
@@ -75,8 +82,19 @@
           "posted": "2026-11-26",
           "pinned_comment_id": "18228821086341796"
         },
-        "youtube": "PENDING: Windsor upload_video 'rate-limited' twice on 2026-11-26 (channel checked first, not uploaded). Same failure as ep001. 2026-11-26 (Samir asked to retry): ep002 x2 and ep001 x1 rate-limited again, via both Windsor servers; channel checked, nothing uploaded. Needs Windsor YouTube reconnect or manual upload.",
-        "tiktok": "MANUAL"
+        "youtube": {
+          "video_id": "67ZEb_wNQDc",
+          "url": "https://www.youtube.com/watch?v=67ZEb_wNQDc",
+          "posted": "2026-11-26",
+          "via": "buffer",
+          "buffer_post_id": "6b08132ad91bf3076839327d",
+          "note": "Windsor upload_video was rate-limited 11 times (2026-11-25/26); posted through Buffer instead."
+        },
+        "tiktok": {
+          "video_id": "7712423671926738198",
+          "posted": "2026-11-26",
+          "by": "Samir (manual)"
+        }
       },
       "note": "Re-cut 2026-11-26 before posting: moving hook (net impact at 0.35 s), whip-in at 3 s, binary debate question, rewatch ending."
     }
@@ -97,6 +115,15 @@
       "account": "_0007XvPtDyTzVplU5LwZAxr8xB8teYDNI3J",
       "name": "Cortex",
       "note": "comments only, no upload via Windsor"
+    },
+    "buffer": {
+      "organization": "6b08120300b5fa4c6b2ad496",
+      "channels": {
+        "youtube": "6b0812a68541f09ecbae044b",
+        "tiktok": "6b0812f48541f09ecbae08e8",
+        "instagram": "6b0812758541f09ecbae00f2"
+      },
+      "note": "Buffer free plan: 3 channels, 10 scheduled posts. YouTube uploads work here (create_post, metadata.youtube.type short)."
     }
   },
   "analytics": {

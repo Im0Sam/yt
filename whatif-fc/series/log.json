@@ -54,7 +54,7 @@
           "posted": "2026-11-25",
           "pinned_comment_id": "18196550080404687"
         },
-        "youtube": "PENDING: Windsor upload_video returned \"rate-limited\" again on 2026-11-25 17:35 and 17:37 UTC (5 failures total since 13:3x UTC). Channel list checked before each retry: not uploaded. Next run checks the channel then retries.",
+        "youtube": "PENDING: Windsor upload_video returned \"rate-limited\" again on 2026-11-25 17:35 and 17:37 UTC (5 failures total since 13:3x UTC). Channel list checked before each retry: not uploaded. Next run checks the channel then retries. 2026-11-26: ep002 also rate-limited twice; looks like an account/connector-level block.",
         "tiktok": {
           "posted": "2026-11-25",
           "by": "Samir (manual)"
@@ -65,10 +65,20 @@
       "ep": "ep002",
       "slug": "ep002-teos-side",
       "arc": "arc01-el-viejo",
-      "status": "ready",
+      "status": "partial",
       "built": "2026-11-25",
       "video": "whatif-fc/videos/ep002-teos-side.mp4",
-      "posts": {}
+      "posts": {
+        "instagram": {
+          "media_id": "18029432396869128",
+          "permalink": "https://www.instagram.com/reel/DgMvPsyhMto/",
+          "posted": "2026-11-26",
+          "pinned_comment_id": "18228821086341796"
+        },
+        "youtube": "PENDING: Windsor upload_video 'rate-limited' twice on 2026-11-26 (channel checked first, not uploaded). Same failure as ep001.",
+        "tiktok": "MANUAL"
+      },
+      "note": "Re-cut 2026-11-26 before posting: moving hook (net impact at 0.35 s), whip-in at 3 s, binary debate question, rewatch ending."
     }
   ],
   "accounts": {

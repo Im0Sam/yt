@@ -1,5 +1,5 @@
 {
-  "post_time_note": "Daily scheduled task. Each run posts the oldest 'ready' episode, then builds the next one as 'ready'. 2026-11-26 evening run: ep002 had already gone out that day, so nothing was posted; ep003 was built for 2026-11-27.",
+  "post_time_note": "Daily scheduled task. Each run posts the oldest 'ready' episode, then builds the next one as 'ready'. 2026-11-27: ep003 posted ~17:36 UTC; ep004 built for 2026-11-28.",
   "arcs": [
     {
       "id": "arc01-el-viejo",
@@ -103,11 +103,44 @@
       "ep": "ep003",
       "slug": "ep003-the-tape",
       "arc": "arc01-el-viejo",
-      "status": "ready",
+      "status": "posted",
       "built": "2026-11-26",
       "video": "whatif-fc/videos/ep003-the-tape.mp4",
       "duration_s": 33.0,
-      "note": "Flashback: Teo's first match (age 8), dad played his own final. Dad writes TEO on his tape that night; reveal: Teo had written a '1' on his own (pays off ep002's planted '1'). Plant: marker in sleeping Teo's glove at ~0:19. Hook text = first VO line; cuts every ~1.5-2.4 s to 9.4 s."
+      "note": "Flashback: Teo's first match (age 8), dad played his own final. Dad writes TEO on his tape that night; reveal: Teo had written a '1' on his own (pays off ep002's planted '1'). Plant: marker in sleeping Teo's glove at ~0:19. Hook text = first VO line; cuts every ~1.5-2.4 s to 9.4 s.",
+      "posts": {
+        "youtube": {
+          "video_id": "g9OJkzmaGh8",
+          "url": "https://www.youtube.com/watch?v=g9OJkzmaGh8",
+          "posted": "2026-11-27",
+          "via": "buffer",
+          "buffer_post_id": "6b09bf91437395ca6eed026e"
+        },
+        "tiktok": {
+          "video_id": "7712906528420056359",
+          "posted": "2026-11-27",
+          "via": "buffer",
+          "buffer_post_id": "6b09bf942b8a129ed8149b70",
+          "url": "https://tiktok.com/@cortex_creator/video/7712906528420056359"
+        },
+        "instagram": {
+          "media_id": "18131088566489012",
+          "permalink": "https://www.instagram.com/reel/DgQOz9ITFqX/",
+          "posted": "2026-11-27",
+          "via": "windsor",
+          "pinned_comment_id": "18207710179378182"
+        }
+      }
+    },
+    {
+      "ep": "ep004",
+      "slug": "ep004-the-offer",
+      "arc": "arc01-el-viejo",
+      "status": "ready",
+      "built": "2026-11-27",
+      "video": "whatif-fc/videos/ep004-the-offer.mp4",
+      "duration_s": 33.5,
+      "note": "Hook: pen slams on the contract at 0.35 s ('SIGN. RETIRE.' / 'HE SAID NO.'), hard cut at 1.6 s to his TEO-taped hand pushing it back. Plant at 0:13-0:14: he tears off the corner 'TRAINING 7:00'. Twist: 7 a.m. next day he turns up at Teo's training with a bag of balls. Ends on the scrap in his palm, loops to the contract on the desk. New character: The Director."
     }
   ],
   "accounts": {
@@ -139,7 +172,7 @@
   },
   "analytics": {
     "ep001-el-viejo": {
-      "checked": "2026-11-26 (evening)",
+      "checked": "2026-11-27",
       "instagram": {
         "permalink": "https://www.instagram.com/reel/DgKp1U4v0eE/",
         "views": 170,
@@ -167,32 +200,40 @@
           "3": 0.44,
           "4": 0.35,
           "5": 0.26,
-          "8": 0.18,
+          "8": 0.19,
           "13": 0.15,
           "20": 0.11,
           "31": 0.09
         }
       },
-      "takeaway": "74% gone by 5 s (static abstract opener + slow 'Ten minutes earlier' bridge); flat after 8 s. 0 organic comments on an open question."
+      "takeaway": "74% gone by 5 s (static abstract opener + slow 'Ten minutes earlier' bridge); flat after 8 s. 0 organic comments on an open question.",
+      "youtube": {
+        "video_id": "5JpBmkIsxeg",
+        "views": 1531,
+        "likes": 19,
+        "comments": 0,
+        "engagement_rate_pct": 1.24,
+        "source": "Buffer metrics (Windsor youtube has no rows for these videos)"
+      }
     },
     "ep002-teos-side": {
-      "checked": "2026-11-26 (evening, ~7 h after posting)",
+      "checked": "2026-11-27",
       "instagram": {
         "permalink": "https://www.instagram.com/reel/DgMvPsyhMto/",
-        "views": 1864,
-        "reach": 1186,
-        "avg_watch_s": 19.0,
-        "skip_rate_3s": 0.266,
-        "likes": 27,
+        "views": 2088,
+        "reach": 1325,
+        "avg_watch_s": 19.5,
+        "skip_rate_3s": 0.265,
+        "likes": 34,
         "comments": 4,
         "shares": 0,
         "saves": 0
       },
       "tiktok": {
         "video_id": "7712423671926738198",
-        "views": 698,
-        "avg_watch_s": 10.79,
-        "full_watch_rate": 0.197,
+        "views": 700,
+        "avg_watch_s": 10.78,
+        "full_watch_rate": 0.196,
         "likes": 8,
         "comments": 1,
         "shares": 0,
@@ -210,8 +251,19 @@
           "31": 0.15
         }
       },
-      "youtube": "no rows yet in Windsor (posted 11:08 UTC; YouTube analytics lag ~1-2 days)",
-      "takeaway": "Moving hook + binary question worked: IG skip rate 49%->27%, avg watch 8.6->19.0 s, 11x the views, 4 comments. TikTok full-watch 11.5%->19.7%, 8 s retention 18%->26%. Biggest loss is still 1-4 s (76%->39%)."
+      "youtube": {
+        "video_id": "67ZEb_wNQDc",
+        "views": 1404,
+        "likes": 15,
+        "comments": 1,
+        "engagement_rate_pct": 1.14,
+        "source": "Buffer metrics"
+      },
+      "takeaway": "Moving hook + binary question worked: IG skip rate 49%->27%, avg watch 8.6->19.0 s, 11x the views, 4 comments. TikTok full-watch 11.5%->19.7%, 8 s retention 18%->26%. Biggest loss is still 1-4 s (76%->39%). Day 2: IG kept growing (2088 views, 19.5 s avg); TikTok stalled at 700; YouTube ~1.4k views each for ep001/ep002 via Buffer."
+    },
+    "ep003-the-tape": {
+      "checked": "2026-11-27 (minutes after posting)",
+      "note": "no data yet"
     }
   }
 }

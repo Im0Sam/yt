@@ -1,0 +1,654 @@
+{
+ "id": "ep004",
+ "slug": "ep004-the-offer",
+ "arc": "arc01-el-viejo",
+ "title_internal": "El Viejo 4: The Offer",
+ "duration": 33.5,
+ "voice": "am_michael",
+ "seed": 8,
+ "hook": {
+  "line1": "SIGN. RETIRE.",
+  "line2": "HE SAID NO.",
+  "until": 2.8,
+  "pulse_at": 0.35
+ },
+ "lines": [
+  {
+   "text": "Sign here. And retire.",
+   "caption": "SIGN HERE. AND RETIRE.",
+   "hl": [
+    "RETIRE"
+   ],
+   "anchor": 0.38,
+   "speed": 1.25
+  },
+  {
+   "text": "He said no.",
+   "caption": "HE SAID NO.",
+   "hl": [
+    "NO"
+   ],
+   "anchor": 1.5,
+   "speed": 1.05
+  },
+  {
+   "text": "Teo's club wanted him as keeper coach.",
+   "caption": "TEO'S CLUB WANTED HIM AS KEEPER COACH.",
+   "hl": [
+    "COACH"
+   ],
+   "anchor": 2.85,
+   "speed": 1.25
+  },
+  {
+   "text": "Every day, next to his son.",
+   "caption": "EVERY DAY, NEXT TO HIS SON.",
+   "hl": [
+    "SON"
+   ],
+   "anchor": 4.65,
+   "speed": 1.2
+  },
+  {
+   "text": "One condition. Hang up the gloves.",
+   "caption": "ONE CONDITION. HANG UP THE GLOVES.",
+   "hl": [
+    "GLOVES"
+   ],
+   "anchor": 6.45,
+   "speed": 1.2
+  },
+  {
+   "text": "He's forty-two. A step slower every week.",
+   "caption": "HE'S 42. A STEP SLOWER EVERY WEEK.",
+   "hl": [
+    "SLOWER"
+   ],
+   "anchor": 8.5,
+   "speed": 1.25
+  },
+  {
+   "text": "He stared at that pen for a long time.",
+   "caption": "HE STARED AT THAT PEN FOR A LONG TIME.",
+   "hl": [
+    "PEN"
+   ],
+   "anchor": 11.3,
+   "speed": 1.15
+  },
+  {
+   "text": "Then he slid it back.",
+   "caption": "THEN HE SLID IT BACK.",
+   "hl": [
+    "BACK"
+   ],
+   "anchor": 13.9,
+   "speed": 1.1
+  },
+  {
+   "text": "Not yet. Not while he can still stop one.",
+   "caption": "NOT YET. NOT WHILE HE CAN STILL STOP ONE.",
+   "hl": [
+    "STOP"
+   ],
+   "anchor": 15.4,
+   "speed": 1.15
+  },
+  {
+   "text": "Next morning. Seven a.m.",
+   "caption": "NEXT MORNING. 7 A.M.",
+   "hl": [
+    "7"
+   ],
+   "anchor": 18.7,
+   "speed": 1.1
+  },
+  {
+   "text": "No coach. Just Teo and the rain.",
+   "caption": "NO COACH. JUST TEO AND THE RAIN.",
+   "hl": [
+    "RAIN"
+   ],
+   "anchor": 20.6,
+   "speed": 1.1
+  },
+  {
+   "text": "Then someone started shooting.",
+   "caption": "THEN SOMEONE STARTED SHOOTING.",
+   "hl": [
+    "SHOOTING"
+   ],
+   "anchor": 23.2,
+   "speed": 1.1
+  },
+  {
+   "text": "Charcoal kit. White streak. No contract.",
+   "caption": "CHARCOAL KIT. WHITE STREAK. NO CONTRACT.",
+   "hl": [
+    "STREAK"
+   ],
+   "anchor": 25.05,
+   "speed": 1.2
+  },
+  {
+   "text": "He never retired. He just turned up early.",
+   "caption": "HE NEVER RETIRED. HE JUST TURNED UP EARLY.",
+   "hl": [
+    "EARLY"
+   ],
+   "anchor": 27.5,
+   "speed": 1.15
+  },
+  {
+   "text": "Watch again. Look at what he tore off.",
+   "caption": "WATCH AGAIN. LOOK AT WHAT HE TORE OFF.",
+   "hl": [
+    "TORE"
+   ],
+   "anchor": 30.1,
+   "speed": 1.15
+  }
+ ],
+ "sound": {
+  "rain": 1.0,
+  "crowd": [
+   [
+    0,
+    0.03
+   ],
+   [
+    8.3,
+    0.03
+   ],
+   [
+    8.4,
+    0.35
+   ],
+   [
+    9.85,
+    0.7
+   ],
+   [
+    11.1,
+    0.3
+   ],
+   [
+    11.2,
+    0.02
+   ],
+   [
+    33.5,
+    0.02
+   ]
+  ],
+  "drone": [
+   [
+    0,
+    0.08
+   ],
+   [
+    2.8,
+    0.06
+   ],
+   [
+    8.4,
+    0.1
+   ],
+   [
+    11.2,
+    0.2
+   ],
+   [
+    13.4,
+    0.26
+   ],
+   [
+    14.6,
+    0.16
+   ],
+   [
+    18.6,
+    0.1
+   ],
+   [
+    23.2,
+    0.14
+   ],
+   [
+    25.0,
+    0.24
+   ],
+   [
+    27.4,
+    0.2
+   ],
+   [
+    30.0,
+    0.26
+   ],
+   [
+    33.5,
+    0.1
+   ]
+  ],
+  "drone_hz": [
+   [
+    0,
+    55
+   ],
+   [
+    11.2,
+    55
+   ],
+   [
+    13.4,
+    58.3
+   ],
+   [
+    18.6,
+    55
+   ],
+   [
+    25.0,
+    61.7
+   ],
+   [
+    27.4,
+    65.4
+   ],
+   [
+    30.0,
+    55
+   ],
+   [
+    33.5,
+    55
+   ]
+  ],
+  "events": [
+   {
+    "type": "whoosh",
+    "t": 0.0,
+    "gain": 0.4,
+    "dur": 0.3,
+    "lo": 3000,
+    "hi": 400
+   },
+   {
+    "type": "thump",
+    "t": 0.35,
+    "gain": 0.95,
+    "dur": 0.4,
+    "f": 70
+   },
+   {
+    "type": "hit",
+    "t": 0.35,
+    "gain": 0.8,
+    "dur": 1.2,
+    "f": 48,
+    "click": 0.9
+   },
+   {
+    "type": "whoosh",
+    "t": 1.5,
+    "gain": 0.3,
+    "dur": 0.35,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 1.6,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 80
+   },
+   {
+    "type": "whoosh",
+    "t": 1.65,
+    "gain": 0.45,
+    "dur": 0.9,
+    "lo": 200,
+    "hi": 900
+   },
+   {
+    "type": "whoosh",
+    "t": 2.65,
+    "gain": 0.35,
+    "dur": 0.4,
+    "lo": 400,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 2.8,
+    "gain": 0.55,
+    "dur": 0.3,
+    "f": 90
+   },
+   {
+    "type": "whoosh",
+    "t": 2.8,
+    "gain": 0.5,
+    "dur": 0.45,
+    "lo": 300,
+    "hi": 4000
+   },
+   {
+    "type": "whoosh",
+    "t": 4.75,
+    "gain": 0.3,
+    "dur": 0.35,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 4.85,
+    "gain": 0.4,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "thump",
+    "t": 6.4,
+    "gain": 0.5,
+    "dur": 0.3,
+    "f": 85
+   },
+   {
+    "type": "thump",
+    "t": 6.85,
+    "gain": 0.6,
+    "dur": 0.25,
+    "f": 140
+   },
+   {
+    "type": "whoosh",
+    "t": 8.3,
+    "gain": 0.35,
+    "dur": 0.4,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 8.4,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 80
+   },
+   {
+    "type": "whoosh",
+    "t": 9.2,
+    "gain": 0.5,
+    "dur": 0.6,
+    "lo": 300,
+    "hi": 3500
+   },
+   {
+    "type": "thump",
+    "t": 9.85,
+    "gain": 0.8,
+    "dur": 0.35,
+    "f": 75
+   },
+   {
+    "type": "splash",
+    "t": 9.85,
+    "gain": 0.5
+   },
+   {
+    "type": "thump",
+    "t": 11.2,
+    "gain": 0.35,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "heartbeat",
+    "t": 11.4,
+    "until": 13.3,
+    "period": 0.85,
+    "gain": 0.4
+   },
+   {
+    "type": "thump",
+    "t": 13.4,
+    "gain": 0.5,
+    "dur": 0.25,
+    "f": 110
+   },
+   {
+    "type": "whoosh",
+    "t": 13.95,
+    "gain": 0.6,
+    "dur": 0.25,
+    "lo": 2500,
+    "hi": 7000
+   },
+   {
+    "type": "whoosh",
+    "t": 14.05,
+    "gain": 0.5,
+    "dur": 0.2,
+    "lo": 3000,
+    "hi": 8000
+   },
+   {
+    "type": "whoosh",
+    "t": 14.5,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 14.6,
+    "gain": 0.4,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "whoosh",
+    "t": 15.0,
+    "gain": 0.3,
+    "dur": 0.8,
+    "lo": 200,
+    "hi": 900
+   },
+   {
+    "type": "footsteps",
+    "t": 16.9,
+    "n": 8,
+    "step": 0.32,
+    "gain": 0.35
+   },
+   {
+    "type": "whoosh",
+    "t": 18.45,
+    "gain": 0.35,
+    "dur": 0.6,
+    "lo": 400,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 18.6,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "thump",
+    "t": 19.3,
+    "gain": 0.35,
+    "dur": 0.15,
+    "f": 300
+   },
+   {
+    "type": "whoosh",
+    "t": 21.0,
+    "gain": 0.18,
+    "dur": 0.3,
+    "lo": 3500,
+    "hi": 6000
+   },
+   {
+    "type": "whoosh",
+    "t": 22.0,
+    "gain": 0.18,
+    "dur": 0.3,
+    "lo": 3500,
+    "hi": 6000
+   },
+   {
+    "type": "thump",
+    "t": 23.2,
+    "gain": 0.5,
+    "dur": 0.3,
+    "f": 90
+   },
+   {
+    "type": "thump",
+    "t": 23.55,
+    "gain": 0.9,
+    "dur": 0.4,
+    "f": 80
+   },
+   {
+    "type": "hit",
+    "t": 23.55,
+    "gain": 1.0,
+    "dur": 1.4,
+    "f": 50,
+    "click": 0.8
+   },
+   {
+    "type": "splash",
+    "t": 23.55,
+    "gain": 0.6
+   },
+   {
+    "type": "whoosh",
+    "t": 24.85,
+    "gain": 0.35,
+    "dur": 0.4,
+    "lo": 500,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 25.0,
+    "gain": 0.5,
+    "dur": 0.3,
+    "f": 80
+   },
+   {
+    "type": "thump",
+    "t": 26.0,
+    "gain": 0.4,
+    "dur": 0.3,
+    "f": 80
+   },
+   {
+    "type": "thump",
+    "t": 26.35,
+    "gain": 0.85,
+    "dur": 0.3,
+    "f": 120
+   },
+   {
+    "type": "whoosh",
+    "t": 26.38,
+    "gain": 0.5,
+    "dur": 0.5,
+    "lo": 300,
+    "hi": 3500
+   },
+   {
+    "type": "whoosh",
+    "t": 27.3,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 27.4,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 80
+   },
+   {
+    "type": "thump",
+    "t": 28.15,
+    "gain": 0.8,
+    "dur": 0.3,
+    "f": 120
+   },
+   {
+    "type": "thump",
+    "t": 28.6,
+    "gain": 0.85,
+    "dur": 0.35,
+    "f": 80
+   },
+   {
+    "type": "splash",
+    "t": 28.6,
+    "gain": 0.5
+   },
+   {
+    "type": "whoosh",
+    "t": 29.85,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 30.0,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "whoosh",
+    "t": 32.7,
+    "gain": 0.45,
+    "dur": 0.5,
+    "lo": 300,
+    "hi": 3000,
+    "rev": true
+   }
+  ]
+ },
+ "publish": {
+  "title": "What If He Refused to Retire for His Son?",
+  "description": "Teo's club offered him the keeper coach job. One condition: retire. He slid the contract back.\nWhat If FC, Part 4 of El Viejo.\nFictional story. Animated, original characters.\n\nShould he have signed it? YES or NO 👇\n\n#football #whatiffc #shorts",
+  "hashtags": [
+   "#football",
+   "#goalkeeper",
+   "#WhatIfFC"
+  ],
+  "tags": [
+   "what if football",
+   "goalkeeper",
+   "football animation",
+   "football short film",
+   "football father son",
+   "what if fc",
+   "el viejo part 4"
+  ],
+  "pinned_comment": "Pause at 0:13 👀 What did he tear off the contract? YES or NO: should he have signed it?"
+ }
+}

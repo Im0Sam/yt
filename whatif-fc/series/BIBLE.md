@@ -15,6 +15,7 @@ highlight word. The hook text sits at the top for the first ~3 s.
 - **Young Teo (flashback, age 8):** same lime kit, gloves too big for him; small puppet (about 1.3 m) in a full-size goal.
 - **El Viejo at 27 (flashback):** same charcoal #1 kit, full dark beard with no white streak yet (`kit='viejo_young'`, `profile(..., young=True)`).
 - **Teams (fictional, no names needed):** El Viejo's side wears navy outfield kits and the opponents wear crimson.
+- **The Director (ep004):** sporting director of Teo's club. Long dark coat, short grey hair, no badge (`kit='director'`, defined in ep004's episode.py).
 - New arcs may add new original characters. Each one gets a one-line visual description added here.
 
 ## Episode formula (every episode)
@@ -42,7 +43,10 @@ ep001 on TikTok: 752 views, 7.4 s average watch of 31 s, 11% full watches. Reten
    average watch rose from 8.6 s to 19.0 s, views were 11x and it got 4 comments. On TikTok full watches went from 11.5% to
    19.7% and 8 s retention from 18% to 26%. The biggest drop is still between 1 s and 4 s (76% to 39%), so the 1–4 s
    stretch needs a second reveal or a hard cut on the hook's answer, not just a moving first frame.
-7. Re-check these numbers each run (Windsor `get_data`: instagram `media_reel_skip_rate`, `media_reel_avg_watch_time`;
+7. **Day-2 check (2026-11-27):** ep002 kept growing on Instagram (1.9k to 2.1k views, 19.5 s average watch, 34 likes) while
+   TikTok stalled at ~700 views for both episodes. YouTube Shorts via Buffer: ep001 1.5k views, ep002 1.4k (Buffer metrics;
+   Windsor's youtube connector returns no rows for these videos). The plant + rewatch prompt format is holding; keep it.
+8. Re-check these numbers each run (Windsor `get_data`: instagram `media_reel_skip_rate`, `media_reel_avg_watch_time`;
    tiktok_organic `video_view_retention_*`, `video_full_watched_rate`) and record them in `log.json` → `analytics`.
 
 ## Guardrails (hard rules)

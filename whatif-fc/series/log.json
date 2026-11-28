@@ -179,10 +179,28 @@
       "choice": {
         "question": "Do you open the door?",
         "A": "OPEN IT",
-        "B": "DON'T OPEN"
+        "B": "DON'T OPEN",
+        "keywords": {
+          "A": [
+            "OPEN IT",
+            "OPEN THE DOOR",
+            "OPEN",
+            "LET HIM IN"
+          ],
+          "B": [
+            "DON'T OPEN",
+            "DONT OPEN",
+            "DO NOT OPEN",
+            "NOT OPEN",
+            "DON'T",
+            "STAY",
+            "RUN",
+            "HIDE"
+          ]
+        }
       },
       "post_on_or_after": "2026-11-29",
-      "note": "First horror episode. Frame 1: CCTV, the Visitor knocks at 0.35 s (knock + sting + glitch). Clue: rules note P.S. 'I ALWAYS HAVE MY KEY' (0:06-0:07) so the knocker who 'forgot his key' isn't Hale. Jump scare 22.25 s: its face at the peephole. Vote card 24.3-33.2 s."
+      "note": "First horror episode. Frame 1: CCTV, the Visitor knocks at 0.35 s (knock + sting + glitch). Clue: rules note P.S. 'I ALWAYS HAVE MY KEY' (0:06-0:07) so the knocker who 'forgot his key' isn't Hale. Jump scare 22.25 s: its face at the peephole. Vote card 24.3-33.2 s. Re-rendered 2026-11-28 with the new hand-drawn Visitor (engine/characters.py)."
     }
   ],
   "accounts": {

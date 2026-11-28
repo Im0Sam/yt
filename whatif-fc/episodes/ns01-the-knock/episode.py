@@ -8,7 +8,8 @@ import math
 import skia
 from lib import *
 from shots import zoom
-from horror import (darkness, dust, flicker, corridor, visitor, scare_face, office_door, cctv, glitch,
+from characters import visitor
+from horror import (darkness, dust, flicker, corridor, scare_face, office_door, cctv, glitch,
                     peephole_mask, neon_text, note, RED, FULL)
 
 RULES = [("NIGHT SHIFT RULES", 70, '#141414'),
@@ -28,12 +29,9 @@ def cctv_hall(c, t, lt, knock_t=0.35):
     corridor(c, t, cam, lamps=[(2.5, 0.8 * f), (7, 0.9), (11.5, 0.6), (16, 0.7 * flicker(t, 4, dead=0.5)), (20, 0.4)],
              length=24, end_glow=0.7)
     x, y = cam.p(1.0, 3.4)
-    s = cam.s(3.4, 1.9) / 190
     swing = math.exp(-max(0, lt - knock_t) * 6) * math.cos(max(0, lt - knock_t) * 12)
-    lift = ease_out(seg(lt, 0.0, knock_t))
-    pz = dict(torso=180, head=6, uaL=-3, faL=-1, uaR=lerp(10, 105, lift) - 20 * swing, faR=lerp(6, 150, lift),
-              thL=-2, shL=-1, thR=2, shR=1)
-    visitor(c, x, y, s, t, back=True, pose=pz, rim_a=0.35, shade=0.55)
+    lift = ease_out(seg(lt, 0.0, knock_t)) if lt >= 0 else 0.0
+    visitor(c, x, y, cam.s(3.4, 2.25), t, view='back', arm=max(0.0, lift - 0.25 * swing), light=0.75, rim_a=0.4)
     sx, sy = shake(lt, 10 * math.exp(-(lt - knock_t) * 7) if lt > knock_t else 0)
     return sx, sy
 
@@ -215,15 +213,15 @@ def s6(c, t, f):
 # =============================================================== S7 16.9-22.2 through the peephole
 def peep_hall(c, t, lt, fig=True):
     cam = Cam(horizon=820, F=1900, h=1.6)
-    lamps = [(2, 0.0), (6, 0.0), (10, flicker(t, 41, rate=0.9, dead=0.3)), (14, 0.0), (18, 0.0), (22, 0.0)]
+    lamps = [(2, 0.0), (6, 0.0), (8, flicker(t, 41, rate=0.9, dead=0.3)), (14, 0.0), (18, 0.0), (22, 0.0)]
     c.save()
     zoom(c, 1.0 + 0.10 * ease(seg(lt, 0, 5.3)), 540, 820)
     corridor(c, t, cam, lamps=lamps, length=26, end_glow=1.0)
     if fig:
-        Z = 10.2
+        Z = 8.2
         x, y = cam.p(0.0, Z)
-        s = cam.s(Z, 1.9) / 190
-        visitor(c, x, y, s, t, back=True, rim_a=0.7 * lamps[2][1] + 0.15)
+        visitor(c, x, y, cam.s(Z, 2.25), t, view='back', light=0.35 + 0.55 * lamps[2][1],
+                rim_a=0.6 * lamps[2][1] + 0.2)
     c.restore()
 
 

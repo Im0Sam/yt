@@ -158,7 +158,26 @@
  "choice": {
   "question": "Do you open the door?",
   "A": "OPEN IT",
-  "B": "DON'T OPEN"
+  "B": "DON'T OPEN",
+  "keywords": {
+   "A": [
+    "OPEN IT",
+    "OPEN THE DOOR",
+    "OPEN",
+    "LET HIM IN"
+   ],
+   "B": [
+    "DON'T OPEN",
+    "DONT OPEN",
+    "DO NOT OPEN",
+    "NOT OPEN",
+    "DON'T",
+    "STAY",
+    "RUN",
+    "HIDE"
+   ]
+  },
+  "tie_break": "A"
  },
  "sound": {
   "rain": 0.6,

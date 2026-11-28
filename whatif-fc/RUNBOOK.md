@@ -16,18 +16,21 @@ which ffmpeg
 The voice model and font are in the repo (`models/`, `engine/fonts/`). Nothing else needs downloading.
 
 ## 1. Count the votes (if the last posted episode has a `choice`)
+Samir's rule: **count the votes on every platform, add them up, and the option with the most votes wins.**
 Find the most recently posted episode in `log.json` → `episodes` that has `choice`. If it already has `vote.result`, skip.
-Read its comments on every platform with Windsor `get_data` (date range covering its post date, e.g. `last_7dT`):
-- Instagram: `connector "instagram"`, fields `media_id, comment_id, comment_text, comment_parent_id`, keep rows whose
-  `media_id` is the episode's Instagram media_id.
-- TikTok: `connector "tiktok_organic"`, fields `comment_video_id, comment_id, comment_text, comment_parent_id`, keep rows
-  whose `comment_video_id` is the episode's TikTok video_id.
-- YouTube: Windsor returns no comment rows for these videos; record Buffer's comment count only.
-Exclude our own pinned comment (its id is in `posts.instagram.pinned_comment_id`) and any comment that is a reply
-(`comment_parent_id` set). A vote is a comment whose text, after trimming emoji and punctuation, **starts with A or B as a
-separate word** ("A", "a!!", "B 100%", "A obviously"), or that clearly names one option's words ("open it", "don't open").
-One vote per comment. Ties or zero votes: pick the option that makes the better story (usually the riskier one) and note
-"tie → A" in the log. Record `vote: {A: n, B: n, result: "A", counted: "<date>", sources: {...}}` on that episode.
+1. Pull its comments from all three platforms with Windsor `get_data` (date range covering the post date, e.g. `last_7dT`):
+   - YouTube: `connector "youtube"`, fields `comment_video_id, comment_id, comment_text, comment_author, comment_published_at`.
+   - TikTok: `connector "tiktok_organic"`, fields `comment_video_id, comment_id, comment_text, comment_username, comment_parent_id`.
+   - Instagram: `connector "instagram"`, fields `media_id, comment_id, comment_text, comment_username, comment_parent_id, comment_timestamp`.
+2. Save the rows exactly as returned to a scratch file `{"youtube": [...], "tiktok": [...], "instagram": [...]}` and run
+   `python3 tools/votes.py episodes/<slug> <that file> --write`. Do not count by hand. The script keeps only that
+   episode's video ids, skips our pinned comment and replies, counts one vote per person per platform (their latest),
+   reads "A"/"B" at the start of a comment or the option's words (`choice.keywords`), totals all platforms, and writes
+   `vote {A, B, result, decided_by, per_platform}` to log.json. Most total votes wins; a tie goes to the option that won
+   more platforms, then to `choice.tie_break`.
+3. Look at the "not counted" lines it prints. If real votes were missed because people used other words, add those words
+   to that episode's `choice.keywords` and run it again.
+4. If a platform's comments can't be read (connector error), count the others and say so in the report.
 
 ## 2. Post
 Account and channel ids are in `series/log.json` → `accounts`. Two connectors are used (find them with ToolSearch):
@@ -87,7 +90,8 @@ For each episode to build:
 2. Create `episodes/<slug>/`:
    - `script.json`: copy the shape of `episodes/ns01-the-knock/script.json`: `duration` (30–38 s), `style`, `hook`,
      `lines` (narration `text`, on-screen `caption` in CAPS, `hl` highlight words, `anchor` seconds, optional `speed`
-     0.9–1.35, and for the Visitor `voice "bm_lewis"`, `pitch -3`, `fx "whisper"`, `fill "#ff2b2b"`), `choice`,
+     0.9–1.35, and for the Visitor `voice "bm_lewis"`, `pitch -3`, `fx "whisper"`, `fill "#ff2b2b"`), `choice` (with
+     `keywords` for A and B, e.g. A ["OPEN IT", "OPEN"], B ["DON'T OPEN", "DON'T"], and `tie_break`),
      `sound` (rain/buzz/drone envelopes and timed events on every cut and scare) and `publish`.
    - `episode.py`: `SCENES = [(start, end, fn), ...]`, contiguous from 0 to `duration`. Reuse `engine/horror.py` and
      `engine/lib.py`; **write new scene functions for new moments** (new rooms, Room 9, the ice machine, the parking lot,
@@ -108,5 +112,5 @@ For each episode to build:
 - `git add -A && git commit -m "Daily run: post <slug>, build <slugs>" && git push`.
 
 ## 5. Report
-Send one short message: what was posted (with links), the vote result that picked it, the key analytics, what was built
+Send one short message: what was posted (with links), the vote result that picked it (A n vs B n, per platform), the key analytics, what was built
 for tomorrow, and anything that failed.

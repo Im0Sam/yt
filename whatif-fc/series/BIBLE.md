@@ -22,7 +22,12 @@ low dissonant `drone_hz` (~41–46 Hz). No crowd (`crowd [[0, 0]]`).
 - **The Wren Motel:** a fictional roadside motel, 12 rooms, red neon "WREN MOTEL" sign with a flickering green
   "VACANCY", one long carpeted hallway (red carpet, sickly olive wallpaper, red EXIT sign at the far end), the front office
   with a heavy wooden door, peephole, lever handle, chain.
-- **Mr. Hale:** the manager (old, grey hair, brown cardigan). He wrote the rules note. Rarely seen; maybe never truly.
+- **Mr. Hale:** the manager: short, a little stooped, round glasses, bushy grey eyebrows, kind tired face, the same brown
+  cardigan, white shirt, grey trousers, **a key ring on his belt**. Normal human proportions (the Visitor's are wrong). He wrote the rules note. Rarely seen; maybe never truly.
+- **Character art lives in `engine/characters.py`** (hand-drawn bezier designs, not the old stick puppets):
+  `visitor(c, x, y, h, t, view='back'|'front', arm, head_turn, light, rim_a)` with h ≈ `cam.s(Z, 2.25)`;
+  `hale(c, x, y, h, t, view)` with h ≈ `cam.s(Z, 1.7)`; `pov_hand(...)` for your flashlight hand. Always use these for
+  full-body shots; `horror.scare_face` for face close-ups. Check `/tmp` character sheets against these before rendering.
 - **The Visitor:** wears Hale's shape: grey hair, brown cardigan, but too tall and too thin (`visitor(..., stretch 1.18,
   thin 0.82)`). From behind it looks like Hale. Its face (`scare_face`): long and grey-pale, uneven hollow eyes with
   pinpoint pupils, a thin grin that runs past the cheeks. It imitates voices.
@@ -49,7 +54,8 @@ low dissonant `drone_hz` (~41–46 Hz). No crowd (`crowd [[0, 0]]`).
    the A/B question, hashtags `#horror #scary #shorts` (+ `#creepy #nightshift #scarystories` in TikTok/IG captions).
 
 ## Branching (how votes become episodes)
-Each run: count the votes on the last posted episode, post the matching pre-built branch, then build **both** branches
+Each run: count the votes on the last posted episode on **all three platforms** (YouTube + TikTok + Instagram, summed;
+most votes wins; `tools/votes.py`), post the matching pre-built branch, then build **both** branches
 of the next episode (`<slug>-a`, `<slug>-b`, e.g. `ns02-a-opened`, `ns02-b-stayed`). Each branch follows its choice
 honestly: if viewers open the door, something really happens because they opened it. Choosing "safe" should never be
 boring; it brings a different danger. Branches that lose are marked `skipped` in `log.json` (their videos are deleted

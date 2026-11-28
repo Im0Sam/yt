@@ -1,11 +1,11 @@
 {
-  "post_time_note": "Daily scheduled task (18:35 Europe/Stockholm). 2026-11-28 run posts ep004 (last El Viejo). ns01 (first horror episode) is queued 'ready' for 2026-11-29; that run must then build both ns02 branches (A/B).",
+  "post_time_note": "Daily scheduled task (18:35 Europe/Stockholm). 2026-11-28 run posted ep004 (last El Viejo; arc01 done). ns01 (first horror episode) is queued 'ready' for 2026-11-29; that run must then build both ns02 branches (A/B).",
   "arcs": [
     {
       "id": "arc01-el-viejo",
       "title": "El Viejo",
       "premise": "A 41-year-old keeper who won't retire, and his son Teo, who keeps goal for the other side.",
-      "status": "ending",
+      "status": "done",
       "outline": [
         {
           "ep": "ep001",
@@ -40,7 +40,8 @@
           "dropped": true
         }
       ],
-      "note": "Samir switched the channel to horror on 2026-11-28 ('Post Part 4, then switch'). ep004 is the last El Viejo episode; once it is posted, set this arc to 'done'. ep005/ep006 dropped."
+      "note": "Samir switched the channel to horror on 2026-11-28 ('Post Part 4, then switch'). ep004 is the last El Viejo episode; once it is posted, set this arc to 'done'. ep005/ep006 dropped.",
+      "ended": "2026-11-28"
     },
     {
       "id": "arc02-night-shift-rules",
@@ -162,11 +163,35 @@
       "ep": "ep004",
       "slug": "ep004-the-offer",
       "arc": "arc01-el-viejo",
-      "status": "ready",
+      "status": "posted",
       "built": "2026-11-27",
       "video": "whatif-fc/videos/ep004-the-offer.mp4",
       "duration_s": 33.5,
-      "note": "Hook: pen slams on the contract at 0.35 s ('SIGN. RETIRE.' / 'HE SAID NO.'), hard cut at 1.6 s to his TEO-taped hand pushing it back. Plant at 0:13-0:14: he tears off the corner 'TRAINING 7:00'. Twist: 7 a.m. next day he turns up at Teo's training with a bag of balls. Ends on the scrap in his palm, loops to the contract on the desk. New character: The Director."
+      "note": "Hook: pen slams on the contract at 0.35 s ('SIGN. RETIRE.' / 'HE SAID NO.'), hard cut at 1.6 s to his TEO-taped hand pushing it back. Plant at 0:13-0:14: he tears off the corner 'TRAINING 7:00'. Twist: 7 a.m. next day he turns up at Teo's training with a bag of balls. Ends on the scrap in his palm, loops to the contract on the desk. New character: The Director.",
+      "posts": {
+        "youtube": {
+          "video_id": "vP9aJlkoSuI",
+          "url": "https://www.youtube.com/shorts/vP9aJlkoSuI",
+          "posted": "2026-11-28",
+          "via": "buffer",
+          "buffer_post_id": "6b0b114dc2c05b6cf48b3873"
+        },
+        "tiktok": {
+          "video_id": "7713277925377854753",
+          "url": "https://tiktok.com/@cortex_creator/video/7713277925377854753",
+          "posted": "2026-11-28",
+          "via": "buffer",
+          "buffer_post_id": "6b0b11595e276ead9fbeb0ef",
+          "note": "Buffer still showed 'sending' a few minutes after posting; Windsor already lists the live video."
+        },
+        "instagram": {
+          "media_id": "18233115553327895",
+          "permalink": "https://www.instagram.com/reel/DgSzz1luL5y/",
+          "posted": "2026-11-28",
+          "via": "windsor",
+          "pinned_comment_id": "18024343580731274"
+        }
+      }
     },
     {
       "ep": "ns01",
@@ -274,6 +299,30 @@
         "comments": 0,
         "engagement_rate_pct": 1.24,
         "source": "Buffer metrics (Windsor youtube has no rows for these videos)"
+      },
+      "latest_2026-11-28": {
+        "checked": "2026-11-28 17:40 UTC",
+        "youtube": {
+          "views": 1757,
+          "likes": 19,
+          "comments": 0
+        },
+        "tiktok": {
+          "views": 757,
+          "avg_watch_s": 7.49,
+          "full_watch_rate": 0.115,
+          "comments": 0,
+          "shares": 1,
+          "new_followers": 1
+        },
+        "instagram": {
+          "views": 170,
+          "avg_watch_s": 8.6,
+          "skip_rate_3s": 0.49,
+          "comments": 1,
+          "shares": 0,
+          "saves": 0
+        }
       }
     },
     "ep002-teos-side": {
@@ -319,7 +368,32 @@
         "engagement_rate_pct": 1.14,
         "source": "Buffer metrics"
       },
-      "takeaway": "Moving hook + binary question worked: IG skip rate 49%->27%, avg watch 8.6->19.0 s, 11x the views, 4 comments. TikTok full-watch 11.5%->19.7%, 8 s retention 18%->26%. Biggest loss is still 1-4 s (76%->39%). Day 2: IG kept growing (2088 views, 19.5 s avg); TikTok stalled at 700; YouTube ~1.4k views each for ep001/ep002 via Buffer."
+      "takeaway": "Moving hook + binary question worked: IG skip rate 49%->27%, avg watch 8.6->19.0 s, 11x the views, 4 comments. TikTok full-watch 11.5%->19.7%, 8 s retention 18%->26%. Biggest loss is still 1-4 s (76%->39%). Day 2: IG kept growing (2088 views, 19.5 s avg); TikTok stalled at 700; YouTube ~1.4k views each for ep001/ep002 via Buffer.",
+      "latest_2026-11-28": {
+        "checked": "2026-11-28 17:40 UTC",
+        "youtube": {
+          "views": 1404,
+          "likes": 15,
+          "comments": 1
+        },
+        "tiktok": {
+          "views": 701,
+          "avg_watch_s": 10.81,
+          "full_watch_rate": 0.197,
+          "comments": 1,
+          "shares": 0,
+          "new_followers": 0
+        },
+        "instagram": {
+          "views": 2093,
+          "avg_watch_s": 19.5,
+          "skip_rate_3s": 0.265,
+          "likes": 34,
+          "comments": 4,
+          "shares": 0,
+          "saves": 0
+        }
+      }
     },
     "ep003-the-tape": {
       "checked": "2026-11-28 01:50 UTC (~8 h after posting)",
@@ -345,8 +419,43 @@
         "new_followers": 0,
         "profile_views": 0
       },
-      "takeaway": "Best TikTok retention so far (16.7 s avg, 23.6% full) but the fewest views (614): retention went up every episode while reach went down. 0 shares/saves/profile visits."
+      "takeaway": "Best TikTok retention so far (16.7 s avg, 23.6% full) but the fewest views (614): retention went up every episode while reach went down. 0 shares/saves/profile visits.",
+      "latest_2026-11-28": {
+        "checked": "2026-11-28 17:40 UTC (~24 h)",
+        "youtube": {
+          "views": 1244,
+          "likes": 17,
+          "comments": 0
+        },
+        "tiktok": {
+          "views": 624,
+          "avg_watch_s": 16.66,
+          "full_watch_rate": 0.236,
+          "likes": 10,
+          "comments": 0,
+          "shares": 0,
+          "new_followers": 0
+        },
+        "instagram": {
+          "views": 151,
+          "avg_watch_s": 11.8,
+          "skip_rate_3s": 0.281,
+          "likes": 0,
+          "comments": 1,
+          "shares": 0,
+          "saves": 0
+        },
+        "per_1k_views_all_platforms": {
+          "comments": 0.5,
+          "shares": 0.0
+        },
+        "takeaway": "At 24 h: YouTube 1,244 views (YT is now the biggest platform for every episode), TikTok 624 / 16.7 s avg / 23.6% full (best retention), IG 151. Comments+shares per 1k views ~0.5 / 0: confirms the engagement bottleneck the horror+vote switch targets."
+      }
     },
-    "summary-2026-11-28": "Analysis for Samir's switch to horror: retention improved every episode (TikTok avg watch 7.5 -> 10.8 -> 16.7 s; IG skip 49% -> 27%), but reach didn't (TikTok 757 -> 701 -> 614 views). Shares, saves and profile visits ~0 everywhere, ~1 new follower total, 0 real vote comments except '1'. Bottleneck = engagement signals (comments, shares, follows), not watch time. Response: horror + A/B comment vote every episode."
+    "summary-2026-11-28": "Analysis for Samir's switch to horror: retention improved every episode (TikTok avg watch 7.5 -> 10.8 -> 16.7 s; IG skip 49% -> 27%), but reach didn't (TikTok 757 -> 701 -> 614 views). Shares, saves and profile visits ~0 everywhere, ~1 new follower total, 0 real vote comments except '1'. Bottleneck = engagement signals (comments, shares, follows), not watch time. Response: horror + A/B comment vote every episode.",
+    "ep004-the-offer": {
+      "checked": "2026-11-28 17:40 UTC (just posted)",
+      "note": "No data yet; read on the next run."
+    }
   }
 }

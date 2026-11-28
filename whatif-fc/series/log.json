@@ -1,11 +1,11 @@
 {
-  "post_time_note": "Daily scheduled task. Each run posts the oldest 'ready' episode, then builds the next one as 'ready'. 2026-11-27: ep003 posted ~17:36 UTC; ep004 built for 2026-11-28.",
+  "post_time_note": "Daily scheduled task (18:35 Europe/Stockholm). 2026-11-28 run posts ep004 (last El Viejo). ns01 (first horror episode) is queued 'ready' for 2026-11-29; that run must then build both ns02 branches (A/B).",
   "arcs": [
     {
       "id": "arc01-el-viejo",
       "title": "El Viejo",
       "premise": "A 41-year-old keeper who won't retire, and his son Teo, who keeps goal for the other side.",
-      "status": "active",
+      "status": "ending",
       "outline": [
         {
           "ep": "ep001",
@@ -30,12 +30,38 @@
         {
           "ep": "ep005",
           "slug": "ep005-the-shootout",
-          "beat": "Father vs son again, in a penalty shootout. El Viejo has to take the final kick against Teo."
+          "beat": "Father vs son again, in a penalty shootout. El Viejo has to take the final kick against Teo.",
+          "dropped": true
         },
         {
           "ep": "ep006",
           "slug": "ep006-the-gloves",
-          "beat": "Arc finale: El Viejo retires on the pitch and hands Teo his taped gloves. Loop back to the net-ripple image."
+          "beat": "Arc finale: El Viejo retires on the pitch and hands Teo his taped gloves. Loop back to the net-ripple image.",
+          "dropped": true
+        }
+      ],
+      "note": "Samir switched the channel to horror on 2026-11-28 ('Post Part 4, then switch'). ep004 is the last El Viejo episode; once it is posted, set this arc to 'done'. ep005/ep006 dropped."
+    },
+    {
+      "id": "arc02-night-shift-rules",
+      "title": "Night Shift Rules",
+      "status": "active",
+      "started": "2026-11-28",
+      "premise": "You (POV) take the night shift at the Wren Motel. The manager, Mr. Hale, left a list of rules. Something that wears Hale's shape (the Visitor) tests every rule. Each episode ends on an A/B choice; the most comment votes decides the next episode.",
+      "rules_note": [
+        "1. Never open the office door after 3 a.m.",
+        "2. Room 9 is empty. If its light is on, don't look.",
+        "3. If someone says your name, don't answer.",
+        "- HALE",
+        "P.S. I always have my key."
+      ],
+      "plan": "Loose 6-episode arc; votes bend it. Ideas to draw on: Room 9's light (rule 2), someone calling your name (rule 3), the real Hale arriving with his key, the CCTV room, the torn bottom half of the rules note, the parking lot at 4 a.m., dawn as the finish line (survive until 6 a.m.). Finale vote decides the ending.",
+      "canon": [],
+      "outline": [
+        {
+          "ep": "ns01",
+          "slug": "ns01-the-knock",
+          "beat": "Rule 1. 3:00 a.m., three knocks, Hale's voice: 'I forgot my key.' Peephole: Hale far down the hall, back turned. Then its face at the lens. Vote: A open the door / B don't."
         }
       ]
     }
@@ -141,6 +167,22 @@
       "video": "whatif-fc/videos/ep004-the-offer.mp4",
       "duration_s": 33.5,
       "note": "Hook: pen slams on the contract at 0.35 s ('SIGN. RETIRE.' / 'HE SAID NO.'), hard cut at 1.6 s to his TEO-taped hand pushing it back. Plant at 0:13-0:14: he tears off the corner 'TRAINING 7:00'. Twist: 7 a.m. next day he turns up at Teo's training with a bag of balls. Ends on the scrap in his palm, loops to the contract on the desk. New character: The Director."
+    },
+    {
+      "ep": "ns01",
+      "slug": "ns01-the-knock",
+      "arc": "arc02-night-shift-rules",
+      "status": "ready",
+      "built": "2026-11-28",
+      "video": "whatif-fc/videos/ns01-the-knock.mp4",
+      "duration_s": 33.8,
+      "choice": {
+        "question": "Do you open the door?",
+        "A": "OPEN IT",
+        "B": "DON'T OPEN"
+      },
+      "post_on_or_after": "2026-11-29",
+      "note": "First horror episode. Frame 1: CCTV, the Visitor knocks at 0.35 s (knock + sting + glitch). Clue: rules note P.S. 'I ALWAYS HAVE MY KEY' (0:06-0:07) so the knocker who 'forgot his key' isn't Hale. Jump scare 22.25 s: its face at the peephole. Vote card 24.3-33.2 s."
     }
   ],
   "accounts": {
@@ -262,8 +304,31 @@
       "takeaway": "Moving hook + binary question worked: IG skip rate 49%->27%, avg watch 8.6->19.0 s, 11x the views, 4 comments. TikTok full-watch 11.5%->19.7%, 8 s retention 18%->26%. Biggest loss is still 1-4 s (76%->39%). Day 2: IG kept growing (2088 views, 19.5 s avg); TikTok stalled at 700; YouTube ~1.4k views each for ep001/ep002 via Buffer."
     },
     "ep003-the-tape": {
-      "checked": "2026-11-27 (minutes after posting)",
-      "note": "no data yet"
-    }
+      "checked": "2026-11-28 01:50 UTC (~8 h after posting)",
+      "instagram": {
+        "permalink": "https://www.instagram.com/reel/DgQOz9ITFqX/",
+        "views": 148,
+        "reach": 112,
+        "avg_watch_s": 12.0,
+        "skip_rate_3s": 0.27,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      },
+      "tiktok": {
+        "video_id": "7712906528420056359",
+        "views": 614,
+        "avg_watch_s": 16.69,
+        "full_watch_rate": 0.236,
+        "likes": 10,
+        "comments": 0,
+        "shares": 0,
+        "new_followers": 0,
+        "profile_views": 0
+      },
+      "takeaway": "Best TikTok retention so far (16.7 s avg, 23.6% full) but the fewest views (614): retention went up every episode while reach went down. 0 shares/saves/profile visits."
+    },
+    "summary-2026-11-28": "Analysis for Samir's switch to horror: retention improved every episode (TikTok avg watch 7.5 -> 10.8 -> 16.7 s; IG skip 49% -> 27%), but reach didn't (TikTok 757 -> 701 -> 614 views). Shares, saves and profile visits ~0 everywhere, ~1 new follower total, 0 real vote comments except '1'. Bottleneck = engagement signals (comments, shares, follows), not watch time. Response: horror + A/B comment vote every episode."
   }
 }

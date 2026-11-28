@@ -1,0 +1,538 @@
+{
+ "id": "ns01",
+ "slug": "ns01-the-knock",
+ "arc": "arc02-night-shift-rules",
+ "title_internal": "Night Shift Rules 1: The Knock",
+ "duration": 33.8,
+ "voice": "am_michael",
+ "seed": 101,
+ "style": {
+  "hl_col": "#ff2b2b",
+  "hook2_col": "#ff2b2b",
+  "badge": "NIGHT SHIFT RULES · EP 1",
+  "badge_until": 2.8
+ },
+ "hook": {
+  "line1": "RULE 1:",
+  "line2": "NEVER OPEN THE DOOR.",
+  "until": 2.8,
+  "pulse_at": 0.35
+ },
+ "lines": [
+  {
+   "text": "Rule one. Never open the door after 3 a.m.",
+   "caption": "RULE 1: NEVER OPEN THE DOOR AFTER 3 A.M.",
+   "hl": [
+    "DOOR"
+   ],
+   "anchor": 0.35,
+   "speed": 1.35
+  },
+  {
+   "text": "You took the night shift at the Wren Motel.",
+   "caption": "YOU TOOK THE NIGHT SHIFT AT THE WREN MOTEL.",
+   "hl": [
+    "NIGHT"
+   ],
+   "anchor": 2.9,
+   "speed": 1.3
+  },
+  {
+   "text": "The manager left you a list of rules.",
+   "caption": "THE MANAGER LEFT YOU A LIST OF RULES.",
+   "hl": [
+    "RULES"
+   ],
+   "anchor": 5.15,
+   "speed": 1.2
+  },
+  {
+   "text": "At 2:59, the hallway lights started dying.",
+   "caption": "AT 2:59, THE HALLWAY LIGHTS STARTED DYING.",
+   "hl": [
+    "DYING"
+   ],
+   "anchor": 7.55,
+   "speed": 1.3
+  },
+  {
+   "text": "Three a.m. Three knocks.",
+   "caption": "3:00 A.M. THREE KNOCKS.",
+   "hl": [
+    "KNOCKS"
+   ],
+   "anchor": 10.3,
+   "speed": 1.1
+  },
+  {
+   "text": "It's me. Hale. I forgot my key.",
+   "caption": "\"IT'S ME. HALE. I FORGOT MY KEY.\"",
+   "hl": [
+    "KEY."
+   ],
+   "anchor": 12.5,
+   "speed": 1.0,
+   "voice": "bm_lewis",
+   "pitch": -3,
+   "fx": "whisper",
+   "fill": "#ff2b2b"
+  },
+  {
+   "text": "The manager's voice. Exactly.",
+   "caption": "THE MANAGER'S VOICE. EXACTLY.",
+   "hl": [
+    "EXACTLY."
+   ],
+   "anchor": 15.3,
+   "speed": 1.3
+  },
+  {
+   "text": "You checked the peephole.",
+   "caption": "YOU CHECKED THE PEEPHOLE.",
+   "hl": [
+    "PEEPHOLE."
+   ],
+   "anchor": 16.9,
+   "speed": 1.15
+  },
+  {
+   "text": "He was at the far end of the hall,",
+   "caption": "HE WAS AT THE FAR END OF THE HALL…",
+   "hl": [
+    "FAR"
+   ],
+   "anchor": 18.4,
+   "speed": 1.15
+  },
+  {
+   "text": "with his back to you.",
+   "caption": "…WITH HIS BACK TO YOU.",
+   "hl": [
+    "BACK"
+   ],
+   "anchor": 20.3,
+   "speed": 1.05
+  },
+  {
+   "text": "Open the door.",
+   "caption": "\"OPEN THE DOOR.\"",
+   "hl": [
+    "OPEN"
+   ],
+   "anchor": 22.3,
+   "speed": 0.95,
+   "voice": "bm_lewis",
+   "pitch": -4,
+   "fx": "whisper",
+   "fill": "#ff2b2b"
+  },
+  {
+   "text": "So. Do you open it?",
+   "caption": "SO. DO YOU OPEN IT?",
+   "hl": [
+    "OPEN"
+   ],
+   "anchor": 24.4,
+   "speed": 1.05
+  },
+  {
+   "text": "Comment A or B. The most votes decides episode two.",
+   "caption": "COMMENT A OR B. MOST VOTES DECIDES EPISODE 2.",
+   "hl": [
+    "A",
+    "B"
+   ],
+   "anchor": 26.1,
+   "speed": 1.15
+  },
+  {
+   "text": "Read the rules again before you vote.",
+   "caption": "READ THE RULES AGAIN BEFORE YOU VOTE.",
+   "hl": [
+    "RULES"
+   ],
+   "anchor": 29.7,
+   "speed": 1.15
+  }
+ ],
+ "choice": {
+  "question": "Do you open the door?",
+  "A": "OPEN IT",
+  "B": "DON'T OPEN"
+ },
+ "sound": {
+  "rain": 0.6,
+  "crowd": [
+   [
+    0,
+    0.0
+   ]
+  ],
+  "buzz": [
+   [
+    0,
+    0.6
+   ],
+   [
+    2.8,
+    0.6
+   ],
+   [
+    2.85,
+    0
+   ],
+   [
+    7.5,
+    0
+   ],
+   [
+    7.55,
+    1.0
+   ],
+   [
+    10.2,
+    0.4
+   ],
+   [
+    10.3,
+    0
+   ],
+   [
+    16.7,
+    0
+   ],
+   [
+    16.75,
+    0.3
+   ],
+   [
+    22.2,
+    0.3
+   ],
+   [
+    22.25,
+    0
+   ],
+   [
+    33.15,
+    0
+   ],
+   [
+    33.2,
+    0.6
+   ]
+  ],
+  "drone": [
+   [
+    0,
+    0.12
+   ],
+   [
+    2.8,
+    0.08
+   ],
+   [
+    7.5,
+    0.14
+   ],
+   [
+    10.3,
+    0.2
+   ],
+   [
+    12.4,
+    0.28
+   ],
+   [
+    16.7,
+    0.2
+   ],
+   [
+    22.2,
+    0.35
+   ],
+   [
+    24.3,
+    0.22
+   ],
+   [
+    33.8,
+    0.15
+   ]
+  ],
+  "drone_hz": [
+   [
+    0,
+    41.2
+   ],
+   [
+    12.4,
+    41.2
+   ],
+   [
+    16.7,
+    43.7
+   ],
+   [
+    22.2,
+    46.2
+   ],
+   [
+    24.3,
+    41.2
+   ],
+   [
+    33.8,
+    41.2
+   ]
+  ],
+  "events": [
+   {
+    "type": "static",
+    "t": 0.0,
+    "gain": 0.5,
+    "dur": 0.3
+   },
+   {
+    "type": "knock",
+    "t": 0.35,
+    "n": 1,
+    "gain": 1.0,
+    "f": 95
+   },
+   {
+    "type": "sting",
+    "t": 0.35,
+    "gain": 0.55,
+    "dur": 1.2
+   },
+   {
+    "type": "knock",
+    "t": 1.5,
+    "n": 3,
+    "gap": 0.33,
+    "gain": 0.9,
+    "f": 105
+   },
+   {
+    "type": "creak",
+    "t": 1.6,
+    "gain": 0.5,
+    "dur": 0.9,
+    "f0": 220,
+    "f1": 320
+   },
+   {
+    "type": "whoosh",
+    "t": 2.7,
+    "gain": 0.35,
+    "dur": 0.4,
+    "lo": 400,
+    "hi": 3000,
+    "rev": true
+   },
+   {
+    "type": "thump",
+    "t": 2.85,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 70
+   },
+   {
+    "type": "static",
+    "t": 5.05,
+    "gain": 0.25,
+    "dur": 0.15
+   },
+   {
+    "type": "thump",
+    "t": 5.15,
+    "gain": 0.35,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "whoosh",
+    "t": 7.45,
+    "gain": 0.3,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 7.55,
+    "gain": 0.35,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "static",
+    "t": 8.3,
+    "gain": 0.2,
+    "dur": 0.12
+   },
+   {
+    "type": "static",
+    "t": 9.0,
+    "gain": 0.25,
+    "dur": 0.1
+   },
+   {
+    "type": "static",
+    "t": 9.6,
+    "gain": 0.3,
+    "dur": 0.15
+   },
+   {
+    "type": "thump",
+    "t": 10.3,
+    "gain": 0.4,
+    "dur": 0.25,
+    "f": 60
+   },
+   {
+    "type": "thump",
+    "t": 10.5,
+    "gain": 0.25,
+    "dur": 0.12,
+    "f": 900
+   },
+   {
+    "type": "knock",
+    "t": 11.0,
+    "n": 3,
+    "gap": 0.42,
+    "gain": 1.0,
+    "f": 100
+   },
+   {
+    "type": "riser",
+    "t": 12.4,
+    "gain": 0.25,
+    "dur": 2.6
+   },
+   {
+    "type": "whoosh",
+    "t": 15.2,
+    "gain": 0.25,
+    "dur": 0.4,
+    "lo": 2500,
+    "hi": 300
+   },
+   {
+    "type": "creak",
+    "t": 15.4,
+    "gain": 0.45,
+    "dur": 1.3,
+    "f0": 160,
+    "f1": 230
+   },
+   {
+    "type": "thump",
+    "t": 16.9,
+    "gain": 0.35,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "heartbeat",
+    "t": 17.0,
+    "until": 22.2,
+    "period": 0.9,
+    "gain": 0.45
+   },
+   {
+    "type": "static",
+    "t": 20.3,
+    "gain": 0.2,
+    "dur": 0.2
+   },
+   {
+    "type": "riser",
+    "t": 20.4,
+    "gain": 0.4,
+    "dur": 1.85
+   },
+   {
+    "type": "sting",
+    "t": 22.25,
+    "gain": 1.0,
+    "dur": 2.0
+   },
+   {
+    "type": "static",
+    "t": 22.25,
+    "gain": 0.7,
+    "dur": 0.6
+   },
+   {
+    "type": "whoosh",
+    "t": 24.25,
+    "gain": 0.35,
+    "dur": 0.5,
+    "lo": 3000,
+    "hi": 300
+   },
+   {
+    "type": "thump",
+    "t": 24.4,
+    "gain": 0.45,
+    "dur": 0.3,
+    "f": 60
+   },
+   {
+    "type": "knock",
+    "t": 27.6,
+    "n": 2,
+    "gap": 0.35,
+    "gain": 0.6,
+    "f": 100
+   },
+   {
+    "type": "creak",
+    "t": 30.4,
+    "gain": 0.35,
+    "dur": 1.2,
+    "f0": 150,
+    "f1": 210
+   },
+   {
+    "type": "knock",
+    "t": 31.9,
+    "n": 3,
+    "gap": 0.3,
+    "gain": 0.7,
+    "f": 100
+   },
+   {
+    "type": "static",
+    "t": 33.15,
+    "gain": 0.45,
+    "dur": 0.3
+   }
+  ]
+ },
+ "publish": {
+  "title": "Night Shift Rules: Never Open the Door After 3 AM",
+  "description": "Rule one: never open the office door after 3 a.m. At 3:00 someone knocked, using the manager's voice.\nNight Shift Rules, Episode 1. YOU decide what happens next.\nFictional story. Animated, original characters.\n\nDo you open the door? Comment A (open it) or B (don't). Most votes decides Episode 2 👇\n\n#horror #scary #shorts",
+  "hashtags": [
+   "#horror",
+   "#scary",
+   "#creepy",
+   "#nightshift",
+   "#scarystories"
+  ],
+  "tags": [
+   "night shift rules",
+   "horror short",
+   "scary story",
+   "creepy animation",
+   "rules horror",
+   "you decide",
+   "horror animation",
+   "3am"
+  ],
+  "pinned_comment": "Read the note at 0:06 again 👀 Then vote: A = OPEN IT, B = DON'T OPEN. Most votes decides Episode 2."
+ }
+}

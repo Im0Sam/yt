@@ -1,64 +1,98 @@
-# What If FC — series bible
+# Series bible
 
-**Lane:** animated football "what if" cinematics. Fictional matches, original characters, and emotional twists.
-**Format:** YouTube Shorts / TikTok / Instagram Reels, 9:16 1080×1920, 30 fps, 28–40 s, narrated, captions burned in.
-**Look:** stylised 2D animation drawn in code (skia): rainy night stadiums, warm floodlights with teal streaks,
-silhouette figures with warm rim light, film grain and vignette. Bebas Neue captions are white with one yellow
-highlight word. The hook text sits at the top for the first ~3 s.
-**Voice:** Kokoro `am_michael`, a calm trailer narrator. Sentences are short. Hard facts come first and the emotion lands last.
+**Current lane (from 2026-11-29): animated horror, "Night Shift Rules".** Samir switched the channel from football to
+horror on 2026-11-28: scary, haunted, jump scares, and **every episode ends on a choice the viewers vote on in the
+comments (A or B); the most votes decides the next episode.** No football in this lane.
+El Viejo (football, arc01) ended with ep004 "The Offer"; its notes are archived at the bottom.
 
-## Recurring cast
-- **El Viejo**: a 41-year-old goalkeeper who refuses to retire. He has weathered olive skin and a salt-and-pepper beard with a
-  white streak on the left side. He wears a plain charcoal keeper kit with #1 and no logos, plus black gloves, and has white tape on his right hand with "TEO" written on it.
-  He is quiet and stubborn and says little.
-- **Teo**: El Viejo's son, early 20s. He is the opposing team's keeper and wears a lime kit. He has the same nose and eyes as his dad and no beard.
-- **Young Teo (flashback, age 8):** same lime kit, gloves too big for him; small puppet (about 1.3 m) in a full-size goal.
-- **El Viejo at 27 (flashback):** same charcoal #1 kit, full dark beard with no white streak yet (`kit='viejo_young'`, `profile(..., young=True)`).
-- **Teams (fictional, no names needed):** El Viejo's side wears navy outfield kits and the opponents wear crimson.
-- **The Director (ep004):** sporting director of Teo's club. Long dark coat, short grey hair, no badge (`kit='director'`, defined in ep004's episode.py).
-- New arcs may add new original characters. Each one gets a one-line visual description added here.
+**Format:** YouTube Shorts / TikTok / Instagram Reels, 9:16 1080×1920, 30 fps, 30–38 s, narrated, captions burned in.
+**Look (horror):** stylised 2D drawn in code (skia + `engine/horror.py`): near-black frames lit by a flashlight circle
+(`darkness`, `dust`), flickering fluorescent corridors (`corridor`, `flicker`), CCTV footage (`cctv`), RGB-split glitch on
+every scare (`glitch`), peephole lens (`peephole_mask`), the Visitor (`visitor`, `scare_face`), neon (`neon_text`),
+handwritten notes (`note`). Bebas Neue captions: white with one **red** highlight word (`style.hl_col "#ff2b2b"`); lines
+spoken by the Visitor are captioned in red with quotes (`fill`). Series badge top-left for the first ~3 s
+(`style.badge "NIGHT SHIFT RULES · EP n"`).
+**Voices:** narrator Kokoro `am_michael`, second person ("you"), short sentences. The Visitor: `bm_lewis`, `pitch -3`
+to `-4`, `fx "whisper"`. Sound: `buzz` hum bed, `knock`, `creak`, `static`, `riser`, `sting` on every jump scare,
+low dissonant `drone_hz` (~41–46 Hz). No crowd (`crowd [[0, 0]]`).
 
-## Episode formula (every episode)
-1. Hook in 0–2 s, usually **payoff first**: show the ending image before explaining it.
-2. Promise at 2–5 s ("Ten minutes earlier…").
-3. Three to five escalation beats, each a new shot.
-4. A twist that is **planted earlier** with a one-second shot or a hidden detail.
-5. A loop line whose last image or sentence flows back into frame 1.
-6. A debate question in the description and a pinned comment that points at a hidden detail.
+## Night Shift Rules: world and cast
+- **You (POV, never shown clearly):** the new night-shift clerk at the Wren Motel. Seen only as a flashlight beam, hands,
+  or a small silhouette in the office window (`kit='guard'`: navy shirt).
+- **The Wren Motel:** a fictional roadside motel, 12 rooms, red neon "WREN MOTEL" sign with a flickering green
+  "VACANCY", one long carpeted hallway (red carpet, sickly olive wallpaper, red EXIT sign at the far end), the front office
+  with a heavy wooden door, peephole, lever handle, chain.
+- **Mr. Hale:** the manager (old, grey hair, brown cardigan). He wrote the rules note. Rarely seen; maybe never truly.
+- **The Visitor:** wears Hale's shape: grey hair, brown cardigan, but too tall and too thin (`visitor(..., stretch 1.18,
+  thin 0.82)`). From behind it looks like Hale. Its face (`scare_face`): long and grey-pale, uneven hollow eyes with
+  pinpoint pupils, a thin grin that runs past the cheeks. It imitates voices.
+- **The Rules note** (`RULES` in ns01's episode.py): 1. Never open the office door after 3 a.m. 2. Room 9 is empty; if its
+  light is on, don't look. 3. If someone says your name, don't answer. Signed "- HALE". **P.S. I always have my key.**
+  Later episodes can reveal more rules (a torn-off bottom half of the note, rules scratched into a wall, etc).
+- New characters get a one-line visual description here.
 
-## Retention rules (learned from ep001 analytics)
-ep001 on TikTok: 752 views, 7.4 s average watch of 31 s, 11% full watches. Retention was 66% at 1 s, 44% at 3 s,
-26% at 5 s and 18% at 8 s, then almost flat (9% at the end). On Instagram, 50% of viewers skipped in the first 3 s.
-**Almost all the loss is in the first 5 seconds; viewers who reach 8 s stay.** So:
-1. **Frame 1 moves.** Open on an impact or action that lands within 0.5 s (net bulge, catch, collision) with a hit
-   sound. Don't open on a static or abstract image.
-2. **Hook text and the first narration line say the same thing** (or the VO directly answers the text). Two different
-   messages in the first 2 s split attention.
-3. **No slow "Ten minutes earlier…" bridge.** The 2–6 s promise must keep moving: a whip-in, fast cut or new information.
-   Cut at least every 2 s until 8 s.
-4. **End with a rewatch prompt tied to the planted detail** ("Watch again. Look at his tape."), which drives replays.
-5. **Debate question is binary** (YES or NO, A or B) in both the description and the pinned comment. ep001's open question
-   got 0 comments.
-6. **Confirmed by ep002 (moving hook, binary question, rewatch prompt):** Instagram skip rate fell from 49% to 27%,
-   average watch rose from 8.6 s to 19.0 s, views were 11x and it got 4 comments. On TikTok full watches went from 11.5% to
-   19.7% and 8 s retention from 18% to 26%. The biggest drop is still between 1 s and 4 s (76% to 39%), so the 1–4 s
-   stretch needs a second reveal or a hard cut on the hook's answer, not just a moving first frame.
-7. **Day-2 check (2026-11-27):** ep002 kept growing on Instagram (1.9k to 2.1k views, 19.5 s average watch, 34 likes) while
-   TikTok stalled at ~700 views for both episodes. YouTube Shorts via Buffer: ep001 1.5k views, ep002 1.4k (Buffer metrics;
-   Windsor's youtube connector returns no rows for these videos). The plant + rewatch prompt format is holding; keep it.
-8. Re-check these numbers each run (Windsor `get_data`: instagram `media_reel_skip_rate`, `media_reel_avg_watch_time`;
-   tiktok_organic `video_view_retention_*`, `video_full_watched_rate`) and record them in `log.json` → `analytics`.
+## Episode formula (horror + vote)
+1. **0–0.5 s:** a moving, loud first frame: an impact, a knock, a light bursting, a glitch, with `sting` or `knock`.
+2. **Hook text = the rule** ("RULE 2:" / "DON'T LOOK.") and the first VO line says the same rule.
+3. **1–3 s:** a hard cut to a second reveal (the rule being broken, or the thing behind the door).
+4. **Recap in one line for new viewers** inside the first 6 s ("Last night, you chose not to open the door.") plus the
+   badge "EP n · YOU VOTED: B". This rewards voters and tells cold viewers what's going on.
+5. 3–5 escalating beats, cut every ≤2 s until 8 s. At least 4 brand-new shots per episode.
+6. **One jump scare** around 60–70% of the runtime (face, figure in the frame, light bursting) with `sting` + glitch +
+   white flash, and a fake-out calm moment just before it.
+7. **A planted clue** (a rule, a door number, a sound) that helps viewers choose. Pinned comment points at it.
+8. **The vote card** for the last ~8 s: the question in white, two option cards "A | ..." (red) and "B | ..." (dark),
+   "COMMENT A OR B · YOU DECIDE EP n+1". VO: "Comment A or B. The most votes decides episode n+1." Then a rewatch prompt
+   tied to the clue, and a loop into frame 1. **Both options must be genuinely tempting**, and neither is "obviously right".
+9. `script.json` → `choice {question, A, B}` must be filled; publish `pinned_comment` repeats the A/B options.
+10. Description: hook sentence, "Night Shift Rules, Episode n. YOU decide what happens next.", the guardrail line,
+   the A/B question, hashtags `#horror #scary #shorts` (+ `#creepy #nightshift #scarystories` in TikTok/IG captions).
+
+## Branching (how votes become episodes)
+Each run: count the votes on the last posted episode, post the matching pre-built branch, then build **both** branches
+of the next episode (`<slug>-a`, `<slug>-b`, e.g. `ns02-a-opened`, `ns02-b-stayed`). Each branch follows its choice
+honestly: if viewers open the door, something really happens because they opened it. Choosing "safe" should never be
+boring; it brings a different danger. Branches that lose are marked `skipped` in `log.json` (their videos are deleted
+in housekeeping). Keep a running `canon` list in the arc entry of `log.json` (what has actually happened on screen).
+
+## Retention rules (learned from the football arc, still apply)
+ep001 on TikTok: 752 views, 7.4 s average watch of 31 s, 11% full watches; 74% gone by 5 s. **Almost all the loss is in the
+first 5 seconds; viewers who reach 8 s stay.**
+1. **Frame 1 moves** with an impact within 0.5 s and a hit sound. Never a static or abstract opener.
+2. **Hook text and the first narration line say the same thing.**
+3. **No slow bridge.** Cut at least every 2 s until 8 s; the 1–4 s stretch needs a second reveal or hard cut.
+4. **End with a rewatch prompt tied to the planted detail.**
+5. **Binary question** (A or B) in description, pinned comment and on screen. Open questions got 0 comments.
+6. Measured gains from these rules on the football arc: IG skip rate 49% → 27%, IG avg watch 8.6 s → 19.5 s, TikTok
+   full watches 11.5% → 19.7% → 23.6%, TikTok avg watch 7.5 s → 10.8 s → 16.7 s (ep001 → ep003).
+7. **What did NOT improve (2026-11-28 analysis):** reach. TikTok views fell 757 → 701 → 614 even as retention rose;
+   shares, saves and profile visits were ~0 on every post; ~1 new follower in total. Serialized "Part N" football
+   stories didn't give cold viewers a reason to comment, share or follow. Horror + voting targets exactly these signals:
+   votes = comments, "send this to the friend who'd open it" = shares, "your vote decides" = follows.
+8. Re-check every run (Windsor `get_data`: instagram `media_views`, `media_reel_skip_rate`, `media_reel_avg_watch_time`,
+   `media_comments_count`, `media_shares`, `media_saved`; tiktok_organic `video_views_count`,
+   `video_average_time_watched`, `video_full_watched_rate`, `video_comments`, `video_shares`, `video_new_followers`,
+   `video_view_retention_*`; YouTube views/likes/comments from Buffer `get_post includeMetrics`) and record them in
+   `log.json` → `analytics`. Track **comments (votes) and shares per 1k views** as the headline numbers for this lane.
 
 ## Guardrails (hard rules)
-- No real players, coaches, clubs, crests, sponsor logos, league or FIFA/World Cup branding, or real trophies.
-  Say "the final", not "the World Cup final".
-- Never recreate a famous real goal or match moment.
-- Stories are fiction. Don't claim "this really happened", and don't put real-world statistics in the narration.
-- Keep it PG: no injuries shown graphically, no violence, nothing sexual, no slurs, no politics.
+- Original characters and places only. No real people, real hotels/brands/chains, real crimes, real missing persons,
+  or famous horror IP (no Slender-type, SCP, Backrooms or movie-monster lookalikes).
+- Stories are fiction. Never claim "this really happened" or "true story".
+- **Scary, not graphic (PG-13):** jump scares, dread, creepy faces and figures are fine. No blood, gore, wounds, bodies,
+  violence shown on screen, self-harm or suicide themes, harm to children or animals, sexual content, slurs, or politics.
+  The threat is implied (a hand on the handle, a shadow, a face at the lens).
 - Every description includes the line "Fictional story. Animated, original characters."
 - Music: only the generated sound bed. No copyrighted tracks.
 
 ## Arc structure
-An arc is 5–7 episodes about one character or relationship. Each episode stands alone and also moves the arc forward.
-When an arc's planned episodes are all posted, the next run writes a **new arc** (new premise, can reuse
-or retire characters) and adds it to `series/log.json` with its full episode outline before building episode 1.
+An arc is 5–7 voted episodes. Each episode stands alone (one rule, one scare, one choice) and moves the arc forward.
+The finale's vote decides the ending. When an arc ends, the next run writes a **new arc** (new place, new rules list,
+can keep the Visitor) and adds it to `series/log.json` with a premise, rules and a loose 5–7 episode plan (the votes
+will bend it) before building episode 1.
+
+---
+## Archive: El Viejo (arc01, football, ep001–ep004)
+El Viejo: 41-year-old keeper, charcoal #1 kit, salt-and-pepper beard with a white streak, "TEO" written on his wrist tape.
+Teo: his son, early 20s, lime kit. The Director (ep004): long dark coat, short grey hair. Football guardrails: no real
+players, clubs, crests, competitions or trophies. Arc ended early at ep004 by Samir's choice (2026-11-28).

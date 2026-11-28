@@ -1,5 +1,6 @@
 """Procedural sound bed from script.json['sound'] + ducked narration -> build/sound.wav (48k stereo).
-Event types: hit, thump, whoosh, whistle, splash, footsteps, heartbeat (see ep001 script.json).
+Event types: hit, thump, whoosh, whistle, splash, footsteps, heartbeat (ep001), and for horror:
+sting (jump scare), knock (n knocks), creak, static, riser. Continuous beds: rain, crowd, drone, buzz (fluorescent hum).
 Usage: python3 tools/sound.py episodes/epXXX-slug"""
 import json, sys, pathlib
 import numpy as np, soundfile as sf
@@ -78,6 +79,42 @@ def splash(dur=0.5):
     return bp(rng.standard_normal(n), 300, 3000) * np.exp(-np.arange(n) / SR * 8) * 0.5
 
 
+def sting(dur=1.8):
+    """Jump-scare stab: dissonant brass-like cluster + noise burst + sub drop."""
+    tt = np.arange(int(dur * SR)) / SR
+    e = np.exp(-tt * 2.2) * np.minimum(1, tt * 200)
+    s = sum(np.sign(np.sin(2 * np.pi * f * tt)) * 0.25 for f in (146.8, 155.6, 207.7, 311.1))
+    s = lp(s, 3500) * e
+    s += bp(rng.standard_normal(len(tt)), 800, 8000) * np.exp(-tt * 9) * 0.9
+    s += np.sin(2 * np.pi * 42 * tt * (1 + 2 * np.exp(-tt * 6))) * np.exp(-tt * 2.5) * 0.9
+    return s * 0.8
+
+
+def knock(f=110):
+    tt = np.arange(int(0.25 * SR)) / SR
+    body = np.sin(2 * np.pi * f * tt) * np.exp(-tt * 28) + 0.6 * np.sin(2 * np.pi * f * 2.7 * tt) * np.exp(-tt * 45)
+    return body + lp(rng.standard_normal(len(tt)), 2500) * np.exp(-tt * 90) * 0.9
+
+
+def creak(dur=1.2, f0=180, f1=260):
+    tt = np.arange(int(dur * SR)) / SR
+    f = np.linspace(f0, f1, len(tt)) * (1 + 0.04 * np.sin(2 * np.pi * 7 * tt))
+    s = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * (0.6 + 0.4 * (rng.random(len(tt)) > 0.97))
+    return bp(s, 300, 3000) * np.sin(np.pi * tt / dur) ** 0.5 * 0.35
+
+
+def static(dur=0.5):
+    n = int(dur * SR)
+    return bp(rng.standard_normal(n), 1500, 12000) * (0.5 + 0.5 * (rng.random(n) > 0.5)) * 0.4
+
+
+def riser(dur=2.0):
+    tt = np.arange(int(dur * SR)) / SR
+    f = 80 * (2 ** (tt / dur * 2.5))
+    s = np.sin(2 * np.pi * np.cumsum(f) / SR) + bp(rng.standard_normal(len(tt)), 400, 6000) * 0.5
+    return s * (tt / dur) ** 2 * 0.6
+
+
 # rain bed
 for ch in (L, R):
     ch += bp(rng.standard_normal(N), 600, 9000) * 0.05 * snd.get('rain', 1.0)
@@ -105,6 +142,17 @@ for e in snd.get('events', []):
     elif ty == 'footsteps':
         for k in range(int(e.get('n', 10))):
             add(thump(0.12, 160) * 0.5, st + k * e.get('step', 0.14), g, 0.2 * (-1) ** k)
+    elif ty == 'sting':
+        add(sting(e.get('dur', 1.8)), st, g, pan)
+    elif ty == 'knock':
+        for k in range(int(e.get('n', 3))):
+            add(knock(e.get('f', 110)), st + k * e.get('gap', 0.42), g, pan)
+    elif ty == 'creak':
+        add(creak(e.get('dur', 1.2), e.get('f0', 180), e.get('f1', 260)), st, g, pan)
+    elif ty == 'static':
+        add(static(e.get('dur', 0.5)), st, g, pan)
+    elif ty == 'riser':
+        add(riser(e.get('dur', 2.0)), st, g, pan)
     elif ty == 'heartbeat':
         tb, per = st, float(e.get('period', 0.9))
         while tb < float(e['until']):
@@ -112,6 +160,13 @@ for e in snd.get('events', []):
             tb += per; per = max(0.55, per * 0.94)
     else:
         print('unknown sound event', ty)
+# fluorescent hum (horror): 'buzz' envelope, crackles when the lights flicker
+be = env(snd.get('buzz'), 0.0)
+if be.any():
+    hum = np.sin(2 * np.pi * 120 * t) + 0.5 * np.sin(2 * np.pi * 240 * t) + 0.25 * np.sign(np.sin(2 * np.pi * 360 * t))
+    crack = (rng.random(N) > 0.9993).astype(float)
+    crack = np.convolve(crack, np.exp(-np.arange(400) / 60), 'same')
+    add(lp(hum, 2000) * be * 0.06 + bp(rng.standard_normal(N), 2000, 9000) * crack * be * 0.4, 0, 1.0)
 # drone
 de = env(snd.get('drone'), 0.0)
 f = env(snd.get('drone_hz'), 55.0)

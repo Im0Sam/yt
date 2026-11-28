@@ -5,7 +5,7 @@
 """
 import json, math, sys, importlib.util, pathlib
 import skia
-from lib import W, H, FPS, text_block, caption, post, ease_out, clamp
+from lib import W, H, FPS, FONT, text_block, caption, post, paint, ease_out, clamp
 
 ENGINE = pathlib.Path(__file__).parent
 
@@ -26,6 +26,8 @@ class Episode:
         self.cues = self._cues()
         h = self.script.get('hook', {})
         self.hook = (h.get('line1', ''), h.get('line2', ''), float(h.get('until', 3.0)), float(h.get('pulse_at', -1)))
+        # optional look: {"hl_col": "#ff2b2b", "hook2_col": "#ff2b2b", "badge": "EP 1", "badge_until": 3.0}
+        self.style = self.script.get('style', {})
 
     def _cues(self):
         lines = self.script['lines']
@@ -36,7 +38,7 @@ class Episode:
             st, en = times[i]
             nxt = times[i + 1][0] - 0.03 if i + 1 < len(lines) else self.duration
             end = min(nxt, en + 0.7) if i + 1 < len(lines) else self.duration
-            cues.append((max(0.0, st - 0.03), end, l['caption'], set(l.get('hl', []))))
+            cues.append((max(0.0, st - 0.03), end, l['caption'], set(l.get('hl', [])), l.get('fill')))
         return cues
 
     def draw(self, c, t, f):
@@ -54,8 +56,16 @@ class Episode:
             if l1:
                 text_block(c, l1, W / 2, 215, 190, scale=pulse, rot=-2, alpha=al)
             if l2:
-                text_block(c, l2, W / 2, 400, 150, fill='#ffd400', scale=pulse, rot=-2, alpha=al)
-        caption(c, t, self.cues)
+                text_block(c, l2, W / 2, 400, 150, fill=self.style.get('hook2_col', '#ffd400'), scale=pulse, rot=-2,
+                           alpha=al)
+        badge = self.style.get('badge')
+        if badge and t < float(self.style.get('badge_until', until)):
+            al = clamp((float(self.style.get('badge_until', until)) - t) / 0.2)
+            bf = skia.Font(FONT, 58)
+            w = bf.measureText(badge)
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect(40, 86, 40 + w + 44, 156), 12, 12), paint('#000000', 0.6 * al))
+            c.drawString(badge, 62, 141, bf, paint(self.style.get('hl_col', '#ffd400'), al))
+        caption(c, t, self.cues, hl_col=self.style.get('hl_col', '#ffd400'))
         post(c, f, flash=flash)
 
 

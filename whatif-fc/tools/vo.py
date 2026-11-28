@@ -16,11 +16,18 @@ N = int(float(script['duration']) * SR)
 vo = np.zeros(N)
 times, prev = [], -1.0
 for i, l in enumerate(script['lines']):
-    a, sr = k.create(l['text'], voice=voice, speed=float(l.get('speed', 1.05)), lang='en-us')
+    a, sr = k.create(l['text'], voice=l.get('voice', voice), speed=float(l.get('speed', 1.05)), lang='en-us')
     a = np.asarray(a, dtype=np.float64)
     idx = np.where(np.abs(a) > 0.01)[0]
     a = a[max(0, idx[0] - 200): idx[-1] + 1200]
-    a = resample_poly(a, SR, sr)
+    # optional 'pitch' in semitones (negative = deeper, also slower) for character voices
+    up = SR
+    if l.get('pitch'):
+        up = int(round(SR * 2 ** (-float(l['pitch']) / 12)))
+    a = resample_poly(a, up, sr)
+    if l.get('fx') == 'whisper':  # breathy double + slight tremolo
+        tt = np.arange(len(a)) / SR
+        a = a * (1 + 0.25 * np.sin(2 * np.pi * 6 * tt)) + 0.35 * np.roll(a, int(0.023 * SR))
     st = max(float(l['anchor']), prev + 0.08)
     j = int(st * SR)
     n = min(len(a), N - j)

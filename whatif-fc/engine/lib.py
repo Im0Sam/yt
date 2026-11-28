@@ -630,14 +630,16 @@ def text_block(c, text, cx, y, size, fill='#ffffff', hl=(), hl_col='#ffd400', st
     return y + total_h
 
 
-def caption(c, t, cues, y=1330, size=104):
-    """cues: list of (start, end, text, highlights)."""
-    for (a, b, txt, hl) in cues:
+def caption(c, t, cues, y=1330, size=104, hl_col='#ffd400'):
+    """cues: list of (start, end, text, highlights[, fill])."""
+    for cue in cues:
+        a, b, txt, hl = cue[:4]
+        fill = cue[4] if len(cue) > 4 and cue[4] else '#ffffff'
         if a <= t < b:
             k = (t - a)
             sc = 1.0 + 0.18 * (1 - ease_out(k / 0.14)) if k < 0.14 else 1.0
             al = clamp(k / 0.06) * clamp((b - t) / 0.06)
-            text_block(c, txt, W / 2, y, size, hl=hl, scale=sc, alpha=al)
+            text_block(c, txt, W / 2, y, size, fill=fill, hl=hl, hl_col=hl_col, scale=sc, alpha=al)
 
 
 # ---------------------------------------------------------------- post
